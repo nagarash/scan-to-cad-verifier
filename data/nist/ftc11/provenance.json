@@ -1,0 +1,19 @@
+{
+  "id": "nist_ftc_11_asme1_rb",
+  "source_page": "https://www.nist.gov/ctl/smart-connected-systems-division/smart-connected-manufacturing-systems-group/mbe-pmi-0",
+  "archive_url": "https://www.nist.gov/system/files/documents/noindex/2022/07/19/NIST_MBE_PMI_FTC_Definitions.zip",
+  "archive_sha256": "3762211e6c5e6c75055f56366abe59c43d5824468fb313d7818ba8ee6b777c15",
+  "files": {
+    "reference.step": {
+      "archive_member": "nist_ftc_11_asme1_rb.stp",
+      "sha256": "d94ee0bed48f06e94621a03b6b088e16fac1bf70607f0d31dfbe87a17bb2ec7e"
+    },
+    "drawing.pdf": {
+      "archive_member": "nist_ftc_11_asme1_rb.pdf",
+      "sha256": "c402787d12ae4b90b27f7da027c60483d55a2e2616b0b7fa8b73a9a8aaf708ce"
+    }
+  },
+  "units": "mm",
+  "origin": "NIST MBE PMI Fully-Toleranced Test Case 11 Rev B",
+  "reuse_statement": "NIST source page states test cases, CAD models, and STEP files can be used without restrictions; acknowledge NIST, no endorsement implied."
+}

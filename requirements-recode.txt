@@ -1,0 +1,4 @@
+-r requirements-cad.txt
+torch==2.5.1
+transformers==4.47.1
+einops==0.8.0

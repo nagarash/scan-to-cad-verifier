@@ -1,0 +1,10 @@
+numpy>=1.26,<3
+scipy>=1.11
+PyYAML>=6
+python-dotenv>=1
+openai>=1.50
+Pillow>=10
+trimesh>=4
+pytest>=8
+# CAD reconstruction: pip install -r requirements-cad.txt
+# Optional Open3D preprocessing: install open3d separately.

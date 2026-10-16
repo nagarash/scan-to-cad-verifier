@@ -1,0 +1,7 @@
+# Preserve CAD/source artifact bytes and avoid enormous text diffs.
+*.step binary
+*.stp binary
+*.stl binary
+*.ply binary
+*.pdf binary
+*.png binary

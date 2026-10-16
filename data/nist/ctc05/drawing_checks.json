@@ -1,0 +1,20 @@
+{
+  "part_id": "nist_ctc_05_asme1_rd",
+  "source": "drawing.pdf page 2, visually reviewed diameter callout",
+  "units": "inch",
+  "checks": [
+    {
+      "feature": "rear_bore_diameter",
+      "nominal": 10.0,
+      "tolerance_plus_minus": 0.001,
+      "nominal_mm": 254.0,
+      "tolerance_mm": 0.0254
+    }
+  ],
+  "not_evaluated": [
+    "GD&T datum relationships",
+    "free-form surfaces",
+    "other geometry without explicit size callouts"
+  ],
+  "note": "No drawing nominal is supplied to feature fitting. This PDF is primarily PMI annotation; most nominal dimensions require CAD."
+}

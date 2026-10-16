@@ -1,0 +1,1767 @@
+{
+  "study": "NIST CTC-05 scan-only agent reconstruction",
+  "generation_provenance": "OpenAI Astra in Codex, attributed by the user; exact checkpoint/model ID, effort, and complete session trace not recorded",
+  "stage_tools": {
+    "scan_input": "Synthetic NIST surface sampling: NumPy, trimesh, CadQuery/OpenCascade",
+    "scan_to_program": "OpenAI Astra in Codex with Python geometric measurement tools (user attribution)",
+    "program_to_solid": "CadQuery 2.8 / OpenCascade geometry construction and STEP export"
+  },
+  "scan": {
+    "point_count": 600000,
+    "units": "mm",
+    "noise_sigma_mm": 0.005,
+    "kind": "synthetic complete-surface samples, not a physical scanner simulation",
+    "known_issue": "Input included one loose auxiliary STEP face; evaluator uses closed physical solid only"
+  },
+  "generation_boundary": "Scan and scan-derived tools only, according to study notes and supplied scripts",
+  "evaluation": {
+    "candidate": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 190,
+      "ignored_auxiliary_faces": 0,
+      "surface_counts": {
+        "PLANE": 114,
+        "TORUS": 6,
+        "CYLINDER": 53,
+        "CONE": 13,
+        "BSPLINE": 4
+      },
+      "extent_mm": [
+        527.0500002,
+        558.8,
+        482.6
+      ],
+      "volume_mm3": 12694778.672268966,
+      "volume_method": "OpenCascade adaptive integration, relative tolerance 1e-7",
+      "cylinders": [
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -50.8,
+            0.0
+          ],
+          "radius_mm": 127.0
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 31.75
+        },
+        {
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            -69.85,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -24.64093123592,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            -0.0,
+            1.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            -95.25,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -33.2255,
+            241.3
+          ],
+          "radius_mm": 5.3581
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -40.9682,
+            206.375
+          ],
+          "radius_mm": 5.3581
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -48.7109,
+            171.45
+          ],
+          "radius_mm": 5.3581
+        },
+        {
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            69.85,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -89.68268039489,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            -0.0,
+            1.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            95.25,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 152.4
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            -146.05
+          ],
+          "radius_mm": 203.2
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -76.2,
+            31.75
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            76.2,
+            31.75
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 279.4
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.113,
+            -192.481,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -222.25,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.113,
+            -192.481,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.474,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.474,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.474,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.474,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.113,
+            192.481,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.113,
+            192.481,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            222.25,
+            0.0
+          ],
+          "radius_mm": 19.05
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            234.95,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.113,
+            -192.481,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.474,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -222.25,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.113,
+            -192.481,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.474,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.474,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.113,
+            192.481,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.474,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            222.25,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.113,
+            192.481,
+            0.0
+          ],
+          "radius_mm": 9.525
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -234.95,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 127.0
+        }
+      ]
+    },
+    "reference": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 208,
+      "ignored_auxiliary_faces": 1,
+      "surface_counts": {
+        "PLANE": 62,
+        "CYLINDER": 100,
+        "TORUS": 7,
+        "BSPLINE": 9,
+        "SPHERE": 4,
+        "CONE": 26
+      },
+      "extent_mm": [
+        527.0500002,
+        558.8,
+        482.60000000004186
+      ],
+      "volume_mm3": 12694921.720012533,
+      "volume_method": "OpenCascade adaptive integration, relative tolerance 1e-7",
+      "cylinders": [
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 279.4
+        },
+        {
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 152.39999999999998
+        },
+        {
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -139.266372466571,
+            76.19999999999999,
+            0.0
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            -146.04999999999998
+          ],
+          "radius_mm": 203.2
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            222.25,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            222.25,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.1127812025174,
+            192.4812,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.1127812025174,
+            192.4812,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.4741459910956,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.4741459910956,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.1127812025174,
+            192.4812,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.1127812025174,
+            192.4812,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.4741459910956,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.4741459910956,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -222.25,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -222.25,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.1127812025174,
+            -192.4812,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.1127812025174,
+            -192.4812,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.4741459910956,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.4741459910956,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.1127812025174,
+            -192.4812,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.1127812025174,
+            -192.4812,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.4741459910956,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.4741459910956,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            76.19999999999999,
+            31.75
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            139.266372466571,
+            76.19999999999999,
+            0.0
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            -69.85,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -50.8,
+            0.0
+          ],
+          "radius_mm": 127.0
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -24.636664649142638,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            -0.0,
+            1.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            69.85,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            95.25,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -89.6784138081172,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            -0.0,
+            1.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            -95.25,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -33.2256003963168,
+            241.29999999999998
+          ],
+          "radius_mm": 5.35813
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -40.9682864891204,
+            206.375
+          ],
+          "radius_mm": 5.35813
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -48.710972581924,
+            171.45
+          ],
+          "radius_mm": 5.35813
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 31.75
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            35.2671418721538,
+            250.4472222919552
+          ],
+          "radius_mm": 3.51714187216396
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            42.993484624111,
+            263.057636519184
+          ],
+          "radius_mm": 0.539871038100062
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            43.912091654330396,
+            263.439023239264
+          ],
+          "radius_mm": 3.2609767607994997
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            35.3071658891592,
+            250.4755335331736
+          ],
+          "radius_mm": 0.41464187216392395
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            35.94573769438539,
+            240.7231638056432
+          ],
+          "radius_mm": 4.19573769438286
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            35.94573769438539,
+            240.6940758001668
+          ],
+          "radius_mm": 1.0925608279034378
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            36.25828680129,
+            226.1628142824076
+          ],
+          "radius_mm": 1.41661834504314
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            42.2032770327234,
+            235.43586950321458
+          ],
+          "radius_mm": 4.546722967287719
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            42.183306214371996,
+            235.14943820224042
+          ],
+          "radius_mm": 1.410378021808038
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            36.2614640962816,
+            226.24110276715618
+          ],
+          "radius_mm": 4.56830860757838
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -139.266372466571,
+            -76.19999999999999,
+            0.0
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            139.266372466571,
+            -76.19999999999999,
+            0.0
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -76.19999999999999,
+            31.75
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -234.95,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            234.95,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 127.0
+        }
+      ]
+    },
+    "cylinder_comparison": {
+      "matches": [
+        {
+          "candidate_index": 0,
+          "reference_index": 28,
+          "diameter_mm": 254.0,
+          "reference_diameter_mm": 254.0,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 1,
+          "reference_index": 37,
+          "diameter_mm": 63.5,
+          "reference_diameter_mm": 63.5,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 2,
+          "reference_index": 27,
+          "diameter_mm": 12.7,
+          "reference_diameter_mm": 12.7,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 3,
+          "reference_index": 29,
+          "diameter_mm": 12.7,
+          "reference_diameter_mm": 12.7,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.004266586777362136
+        },
+        {
+          "candidate_index": 4,
+          "reference_index": 33,
+          "diameter_mm": 12.7,
+          "reference_diameter_mm": 12.7,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 5,
+          "reference_index": 34,
+          "diameter_mm": 10.7162,
+          "reference_diameter_mm": 10.71626,
+          "diameter_error_mm": -5.9999999999504894e-05,
+          "axis_offset_mm": 0.00010039631680314187
+        },
+        {
+          "candidate_index": 6,
+          "reference_index": 35,
+          "diameter_mm": 10.7162,
+          "reference_diameter_mm": 10.71626,
+          "diameter_error_mm": -5.9999999999504894e-05,
+          "axis_offset_mm": 8.648912039888046e-05
+        },
+        {
+          "candidate_index": 7,
+          "reference_index": 36,
+          "diameter_mm": 10.7162,
+          "reference_diameter_mm": 10.71626,
+          "diameter_error_mm": -5.9999999999504894e-05,
+          "axis_offset_mm": 7.258192399461905e-05
+        },
+        {
+          "candidate_index": 8,
+          "reference_index": 30,
+          "diameter_mm": 12.7,
+          "reference_diameter_mm": 12.7,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 9,
+          "reference_index": 32,
+          "diameter_mm": 12.7,
+          "reference_diameter_mm": 12.7,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.004266586772800451
+        },
+        {
+          "candidate_index": 10,
+          "reference_index": 31,
+          "diameter_mm": 12.7,
+          "reference_diameter_mm": 12.7,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 11,
+          "reference_index": 2,
+          "diameter_mm": 304.8,
+          "reference_diameter_mm": 304.79999999999995,
+          "diameter_error_mm": 5.684341886080802e-14,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 12,
+          "reference_index": 4,
+          "diameter_mm": 406.4,
+          "reference_diameter_mm": 406.4,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 2.842170943040401e-14
+        },
+        {
+          "candidate_index": 13,
+          "reference_index": 50,
+          "diameter_mm": 12.7,
+          "reference_diameter_mm": 12.7,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 1.4210854715202004e-14
+        },
+        {
+          "candidate_index": 14,
+          "reference_index": 25,
+          "diameter_mm": 12.7,
+          "reference_diameter_mm": 12.7,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 1.4210854715202004e-14
+        },
+        {
+          "candidate_index": 15,
+          "reference_index": 1,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 16,
+          "reference_index": 0,
+          "diameter_mm": 558.8,
+          "reference_diameter_mm": 558.8,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 17,
+          "reference_index": 21,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.000296432687799473
+        },
+        {
+          "candidate_index": 18,
+          "reference_index": 15,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 19,
+          "reference_index": 17,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.000296432687799473
+        },
+        {
+          "candidate_index": 20,
+          "reference_index": 23,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.00014599109562141166
+        },
+        {
+          "candidate_index": 21,
+          "reference_index": 19,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.00014599109562141166
+        },
+        {
+          "candidate_index": 22,
+          "reference_index": 51,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 23,
+          "reference_index": 9,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.00014599109562141166
+        },
+        {
+          "candidate_index": 24,
+          "reference_index": 13,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.00014599109562141166
+        },
+        {
+          "candidate_index": 25,
+          "reference_index": 7,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.000296432687799473
+        },
+        {
+          "candidate_index": 26,
+          "reference_index": 11,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.000296432687799473
+        },
+        {
+          "candidate_index": 27,
+          "reference_index": 5,
+          "diameter_mm": 38.1,
+          "reference_diameter_mm": 38.099999999999994,
+          "diameter_error_mm": 7.105427357601002e-15,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 28,
+          "reference_index": 54,
+          "diameter_mm": 7.9375,
+          "reference_diameter_mm": 7.9375,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 29,
+          "reference_index": 55,
+          "diameter_mm": 7.9375,
+          "reference_diameter_mm": 7.9375,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 30,
+          "reference_index": 22,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.000296432687799473
+        },
+        {
+          "candidate_index": 31,
+          "reference_index": 24,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.00014599109562141166
+        },
+        {
+          "candidate_index": 32,
+          "reference_index": 16,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 33,
+          "reference_index": 18,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.000296432687799473
+        },
+        {
+          "candidate_index": 34,
+          "reference_index": 20,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.00014599109562141166
+        },
+        {
+          "candidate_index": 35,
+          "reference_index": 10,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.00014599109562141166
+        },
+        {
+          "candidate_index": 36,
+          "reference_index": 8,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.000296432687799473
+        },
+        {
+          "candidate_index": 37,
+          "reference_index": 14,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.00014599109562141166
+        },
+        {
+          "candidate_index": 38,
+          "reference_index": 6,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 39,
+          "reference_index": 12,
+          "diameter_mm": 19.05,
+          "reference_diameter_mm": 19.049999999999997,
+          "diameter_error_mm": 3.552713678800501e-15,
+          "axis_offset_mm": 0.000296432687799473
+        },
+        {
+          "candidate_index": 40,
+          "reference_index": 53,
+          "diameter_mm": 7.9375,
+          "reference_diameter_mm": 7.9375,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 41,
+          "reference_index": 52,
+          "diameter_mm": 7.9375,
+          "reference_diameter_mm": 7.9375,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        },
+        {
+          "candidate_index": 42,
+          "reference_index": 56,
+          "diameter_mm": 254.0,
+          "reference_diameter_mm": 254.0,
+          "diameter_error_mm": 0.0,
+          "axis_offset_mm": 0.0
+        }
+      ],
+      "missing_reference_indices": [
+        3,
+        26,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "extra_candidate_indices": [],
+      "association": "one-to-one held-out CAD association; no independent semantic feature naming"
+    },
+    "drawing_checks": [
+      {
+        "feature": "rear_bore_diameter",
+        "nominal": 10.0,
+        "tolerance_plus_minus": 0.001,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254,
+        "measured_mm": 254.0,
+        "passed": true,
+        "association": "held-out CAD-assisted"
+      }
+    ],
+    "accepted": false,
+    "rejection_reasons": [
+      "Reference cylindrical features are missing",
+      "Sampled bidirectional surface distances exceed geometry thresholds"
+    ],
+    "surface_comparison": {
+      "samples_each_direction": 5000,
+      "tessellation_mm": 0.002,
+      "angular_tolerance_rad": 0.03,
+      "candidate_to_reference_p95_mm": 0.0029664805018493035,
+      "reference_to_candidate_p95_mm": 0.0032462390950578103,
+      "sampled_max_mm": 0.9895351895988689,
+      "scope": "Sampled geometry evidence, not proof of complete GD&T conformance"
+    },
+    "relative_volume_error": 1.1268107572560363e-05,
+    "acceptance_scope": "Selected sizes and sampled geometry; datum-based GD&T not evaluated",
+    "reference_used_only_by_evaluator": true,
+    "extent_error_mm": [
+      0.0,
+      0.0,
+      -4.18367562815547e-11
+    ]
+  },
+  "study_scope": "Single scan-only reconstruction case study; not a model ranking",
+  "source_program": "examples/ctc05_scan_only/reconstruct.py",
+  "program_changes": "Only CLI/output-directory routing changed from supplied program; build geometry preserved"
+}

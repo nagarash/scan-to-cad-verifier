@@ -1,0 +1,898 @@
+{
+  "source": {
+    "id": "nist_ftc_11_asme1_rb",
+    "source_page": "https://www.nist.gov/ctl/smart-connected-systems-division/smart-connected-manufacturing-systems-group/mbe-pmi-0",
+    "archive_url": "https://www.nist.gov/system/files/documents/noindex/2022/07/19/NIST_MBE_PMI_FTC_Definitions.zip",
+    "archive_sha256": "3762211e6c5e6c75055f56366abe59c43d5824468fb313d7818ba8ee6b777c15",
+    "files": {
+      "reference.step": {
+        "archive_member": "nist_ftc_11_asme1_rb.stp",
+        "sha256": "d94ee0bed48f06e94621a03b6b088e16fac1bf70607f0d31dfbe87a17bb2ec7e"
+      },
+      "drawing.pdf": {
+        "archive_member": "nist_ftc_11_asme1_rb.pdf",
+        "sha256": "c402787d12ae4b90b27f7da027c60483d55a2e2616b0b7fa8b73a9a8aaf708ce"
+      }
+    },
+    "units": "mm",
+    "origin": "NIST MBE PMI Fully-Toleranced Test Case 11 Rev B",
+    "reuse_statement": "NIST source page states test cases, CAD models, and STEP files can be used without restrictions; acknowledge NIST, no endorsement implied."
+  },
+  "scope": "Known aligned annular topology; four selected size checks; synthetic data only",
+  "drawing_spec_source": "Visually reviewed transcription; not the rejected model output",
+  "drawing_dimensions": {
+    "outer_diameter_mm": {
+      "nominal": 63.0,
+      "tolerance": 0.5,
+      "page": 1,
+      "qualifier": "AVG O.D.; fitted-cylinder diameter proxy"
+    },
+    "inner_diameter_mm": {
+      "nominal": 32.0,
+      "tolerance": 0.3,
+      "page": 1,
+      "qualifier": "AVG I.D.; fitted-cylinder diameter proxy"
+    },
+    "rim_radius_mm": {
+      "nominal": 1.5,
+      "tolerance": 0.04,
+      "page": 1,
+      "qualifier": "2X R; both rims share a fitted radius in this model family"
+    },
+    "web_thickness_mm": {
+      "nominal": 1.93,
+      "tolerance": 0.08,
+      "page": 2,
+      "qualifier": "Central web thickness, not maximum part height"
+    }
+  },
+  "not_evaluated": [
+    "Datum-based surface profile",
+    "Free-state roundness and flatness",
+    "2X R0.1 MAX transitions",
+    "Circumference reference dimension (197.9)",
+    "General free-state compliance of the non-rigid part"
+  ],
+  "cases": [
+    {
+      "seed": 42,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "d94ee0bed48f06e94621a03b6b088e16fac1bf70607f0d31dfbe87a17bb2ec7e",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 30000,
+        "retained_points": 30000,
+        "seed": 42,
+        "noise_sigma_mm": 0.01,
+        "outlier_fraction": 0.02,
+        "outlier_count": 600,
+        "dropout_fraction": 0.0,
+        "sampling_method": "exact area-weighted analytic ring surfaces from STEP",
+        "linear_tessellation_tolerance_mm": null,
+        "angular_tessellation_tolerance_rad": null,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "outcome": "accepted_after_refit",
+      "iterations": [
+        {
+          "iteration": 0,
+          "method": "ordinary_least_squares",
+          "parameters": {
+            "center_xy_mm": [
+              0.07492951504278703,
+              -0.12685148591552886
+            ],
+            "inner_diameter_mm": 31.6624600682297,
+            "outer_diameter_mm": 63.815057068412706,
+            "bottom_z_mm": -1.4998878392162929,
+            "shoulder_z_mm": -0.34526767577073625,
+            "web_top_z_mm": 0.42504487220093823,
+            "rim_radius_mm": 1.8250144703606175,
+            "median_surface_residual_mm": 0.010919389340295016,
+            "explained_fraction": 0.7636
+          },
+          "drawing_verification": {
+            "passed": false,
+            "checks": [
+              {
+                "dimension": "outer_diameter_mm",
+                "measured_mm": 63.815057068412706,
+                "nominal_mm": 63.0,
+                "absolute_error_mm": 0.8150570684127061,
+                "signed_error_mm": 0.8150570684127061,
+                "tolerance_mm": 0.5,
+                "source_page": 1,
+                "qualifier": "AVG O.D.; fitted-cylinder diameter proxy",
+                "passed": false
+              },
+              {
+                "dimension": "inner_diameter_mm",
+                "measured_mm": 31.6624600682297,
+                "nominal_mm": 32.0,
+                "absolute_error_mm": 0.3375399317703014,
+                "signed_error_mm": -0.3375399317703014,
+                "tolerance_mm": 0.3,
+                "source_page": 1,
+                "qualifier": "AVG I.D.; fitted-cylinder diameter proxy",
+                "passed": false
+              },
+              {
+                "dimension": "rim_radius_mm",
+                "measured_mm": 1.8250144703606175,
+                "nominal_mm": 1.5,
+                "absolute_error_mm": 0.3250144703606175,
+                "signed_error_mm": 0.3250144703606175,
+                "tolerance_mm": 0.04,
+                "source_page": 1,
+                "qualifier": "2X R; both rims share a fitted radius in this model family",
+                "passed": false
+              },
+              {
+                "dimension": "web_thickness_mm",
+                "measured_mm": 1.924932711417231,
+                "nominal_mm": 1.93,
+                "absolute_error_mm": 0.005067288582768947,
+                "signed_error_mm": -0.005067288582768947,
+                "tolerance_mm": 0.08,
+                "source_page": 2,
+                "qualifier": "Central web thickness, not maximum part height",
+                "passed": true
+              }
+            ],
+            "not_evaluated": [
+              "Datum-based surface profile",
+              "Free-state roundness and flatness",
+              "2X R0.1 MAX transitions",
+              "Circumference reference dimension (197.9)",
+              "General free-state compliance of the non-rigid part"
+            ],
+            "scope": "Four selected fitted-size checks only; no full GD&T or metrological uncertainty claim"
+          },
+          "evidence_coverage_passed": false,
+          "accepted": false,
+          "held_out_step_geometry": {
+            "reference_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.0,
+              "inner_diameter_mm": 32.0,
+              "rim_radius_mm": 1.5,
+              "web_thickness_mm": 1.925
+            },
+            "candidate_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.815057068412,
+              "inner_diameter_mm": 31.66246006823,
+              "rim_radius_mm": 1.825014470361,
+              "web_thickness_mm": 1.924932711417
+            },
+            "cad_feature_absolute_errors_mm": {
+              "outer_diameter_mm": 0.8150570684120026,
+              "inner_diameter_mm": 0.3375399317699994,
+              "rim_radius_mm": 0.32501447036100006,
+              "web_thickness_mm": 6.72885829999803e-05,
+              "center_xy_mm": 0.14732865201190448,
+              "bottom_z_mm": 0.00011216078400000384,
+              "shoulder_z_mm": 0.345267675771
+            },
+            "symmetric_mean_surface_distance_mm": 0.05334859879986406,
+            "sampled_p95_surface_distance_mm": 0.3248834298271112,
+            "sampled_max_surface_distance_mm": 0.5548516462769015,
+            "samples_per_direction": 6000,
+            "evaluation_seed": 101,
+            "surface_sampling": "Area-weighted analytic surfaces extracted from each STEP; no evaluation tessellation",
+            "note": "Independent STEP analytic-feature and sampled-surface comparison; no Boolean IoU or full GD&T claim"
+          },
+          "failed_dimensions": [
+            "outer_diameter_mm",
+            "inner_diameter_mm",
+            "rim_radius_mm"
+          ]
+        },
+        {
+          "iteration": 1,
+          "method": "soft_l1_robust_refit",
+          "parameters": {
+            "center_xy_mm": [
+              0.00019898530339979703,
+              0.0003079099412497399
+            ],
+            "inner_diameter_mm": 32.00183884323573,
+            "outer_diameter_mm": 63.0027614199347,
+            "bottom_z_mm": -1.4998878392162929,
+            "shoulder_z_mm": -0.0007330050416273082,
+            "web_top_z_mm": 0.42504487220093823,
+            "rim_radius_mm": 1.5008833846079999,
+            "median_surface_residual_mm": 0.007003775870611073,
+            "explained_fraction": 0.9807666666666667
+          },
+          "drawing_verification": {
+            "passed": true,
+            "checks": [
+              {
+                "dimension": "outer_diameter_mm",
+                "measured_mm": 63.0027614199347,
+                "nominal_mm": 63.0,
+                "absolute_error_mm": 0.0027614199346999158,
+                "signed_error_mm": 0.0027614199346999158,
+                "tolerance_mm": 0.5,
+                "source_page": 1,
+                "qualifier": "AVG O.D.; fitted-cylinder diameter proxy",
+                "passed": true
+              },
+              {
+                "dimension": "inner_diameter_mm",
+                "measured_mm": 32.00183884323573,
+                "nominal_mm": 32.0,
+                "absolute_error_mm": 0.0018388432357312468,
+                "signed_error_mm": 0.0018388432357312468,
+                "tolerance_mm": 0.3,
+                "source_page": 1,
+                "qualifier": "AVG I.D.; fitted-cylinder diameter proxy",
+                "passed": true
+              },
+              {
+                "dimension": "rim_radius_mm",
+                "measured_mm": 1.5008833846079999,
+                "nominal_mm": 1.5,
+                "absolute_error_mm": 0.0008833846079998597,
+                "signed_error_mm": 0.0008833846079998597,
+                "tolerance_mm": 0.04,
+                "source_page": 1,
+                "qualifier": "2X R; both rims share a fitted radius in this model family",
+                "passed": true
+              },
+              {
+                "dimension": "web_thickness_mm",
+                "measured_mm": 1.924932711417231,
+                "nominal_mm": 1.93,
+                "absolute_error_mm": 0.005067288582768947,
+                "signed_error_mm": -0.005067288582768947,
+                "tolerance_mm": 0.08,
+                "source_page": 2,
+                "qualifier": "Central web thickness, not maximum part height",
+                "passed": true
+              }
+            ],
+            "not_evaluated": [
+              "Datum-based surface profile",
+              "Free-state roundness and flatness",
+              "2X R0.1 MAX transitions",
+              "Circumference reference dimension (197.9)",
+              "General free-state compliance of the non-rigid part"
+            ],
+            "scope": "Four selected fitted-size checks only; no full GD&T or metrological uncertainty claim"
+          },
+          "evidence_coverage_passed": true,
+          "accepted": true,
+          "held_out_step_geometry": {
+            "reference_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.0,
+              "inner_diameter_mm": 32.0,
+              "rim_radius_mm": 1.5,
+              "web_thickness_mm": 1.925
+            },
+            "candidate_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.002761419934,
+              "inner_diameter_mm": 32.001838843236,
+              "rim_radius_mm": 1.500883384608,
+              "web_thickness_mm": 1.924932711417
+            },
+            "cad_feature_absolute_errors_mm": {
+              "outer_diameter_mm": 0.0027614199339964784,
+              "inner_diameter_mm": 0.001838843236001253,
+              "rim_radius_mm": 0.0008833846080000818,
+              "web_thickness_mm": 6.72885829999803e-05,
+              "center_xy_mm": 0.0003666110785144172,
+              "bottom_z_mm": 0.00011216078400000384,
+              "shoulder_z_mm": 0.0007330050416255
+            },
+            "symmetric_mean_surface_distance_mm": 0.0003289428210158977,
+            "sampled_p95_surface_distance_mm": 0.0014683379698656291,
+            "sampled_max_surface_distance_mm": 0.0027430255479453753,
+            "samples_per_direction": 6000,
+            "evaluation_seed": 101,
+            "surface_sampling": "Area-weighted analytic surfaces extracted from each STEP; no evaluation tessellation",
+            "note": "Independent STEP analytic-feature and sampled-surface comparison; no Boolean IoU or full GD&T claim"
+          },
+          "failed_dimensions": []
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "d94ee0bed48f06e94621a03b6b088e16fac1bf70607f0d31dfbe87a17bb2ec7e",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 30000,
+        "retained_points": 30000,
+        "seed": 43,
+        "noise_sigma_mm": 0.01,
+        "outlier_fraction": 0.02,
+        "outlier_count": 600,
+        "dropout_fraction": 0.0,
+        "sampling_method": "exact area-weighted analytic ring surfaces from STEP",
+        "linear_tessellation_tolerance_mm": null,
+        "angular_tessellation_tolerance_rad": null,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "outcome": "accepted_after_refit",
+      "iterations": [
+        {
+          "iteration": 0,
+          "method": "ordinary_least_squares",
+          "parameters": {
+            "center_xy_mm": [
+              -0.03134870525441394,
+              -0.08158479690594753
+            ],
+            "inner_diameter_mm": 32.0376635718707,
+            "outer_diameter_mm": 63.64333204458454,
+            "bottom_z_mm": -1.4997856532509117,
+            "shoulder_z_mm": -0.2200942369518195,
+            "web_top_z_mm": 0.4252503474892455,
+            "rim_radius_mm": 1.7143995406186265,
+            "median_surface_residual_mm": 0.010545362408558634,
+            "explained_fraction": 0.7694333333333333
+          },
+          "drawing_verification": {
+            "passed": false,
+            "checks": [
+              {
+                "dimension": "outer_diameter_mm",
+                "measured_mm": 63.64333204458454,
+                "nominal_mm": 63.0,
+                "absolute_error_mm": 0.6433320445845396,
+                "signed_error_mm": 0.6433320445845396,
+                "tolerance_mm": 0.5,
+                "source_page": 1,
+                "qualifier": "AVG O.D.; fitted-cylinder diameter proxy",
+                "passed": false
+              },
+              {
+                "dimension": "inner_diameter_mm",
+                "measured_mm": 32.0376635718707,
+                "nominal_mm": 32.0,
+                "absolute_error_mm": 0.03766357187070213,
+                "signed_error_mm": 0.03766357187070213,
+                "tolerance_mm": 0.3,
+                "source_page": 1,
+                "qualifier": "AVG I.D.; fitted-cylinder diameter proxy",
+                "passed": true
+              },
+              {
+                "dimension": "rim_radius_mm",
+                "measured_mm": 1.7143995406186265,
+                "nominal_mm": 1.5,
+                "absolute_error_mm": 0.21439954061862654,
+                "signed_error_mm": 0.21439954061862654,
+                "tolerance_mm": 0.04,
+                "source_page": 1,
+                "qualifier": "2X R; both rims share a fitted radius in this model family",
+                "passed": false
+              },
+              {
+                "dimension": "web_thickness_mm",
+                "measured_mm": 1.9250360007401572,
+                "nominal_mm": 1.93,
+                "absolute_error_mm": 0.0049639992598427,
+                "signed_error_mm": -0.0049639992598427,
+                "tolerance_mm": 0.08,
+                "source_page": 2,
+                "qualifier": "Central web thickness, not maximum part height",
+                "passed": true
+              }
+            ],
+            "not_evaluated": [
+              "Datum-based surface profile",
+              "Free-state roundness and flatness",
+              "2X R0.1 MAX transitions",
+              "Circumference reference dimension (197.9)",
+              "General free-state compliance of the non-rigid part"
+            ],
+            "scope": "Four selected fitted-size checks only; no full GD&T or metrological uncertainty claim"
+          },
+          "evidence_coverage_passed": false,
+          "accepted": false,
+          "held_out_step_geometry": {
+            "reference_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.0,
+              "inner_diameter_mm": 32.0,
+              "rim_radius_mm": 1.5,
+              "web_thickness_mm": 1.925
+            },
+            "candidate_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.643332044584,
+              "inner_diameter_mm": 32.03766357187,
+              "rim_radius_mm": 1.714399540619,
+              "web_thickness_mm": 1.92503600074
+            },
+            "cad_feature_absolute_errors_mm": {
+              "outer_diameter_mm": 0.6433320445839996,
+              "inner_diameter_mm": 0.03766357186999869,
+              "rim_radius_mm": 0.21439954061900002,
+              "web_thickness_mm": 3.600073999998621e-05,
+              "center_xy_mm": 0.08740034557891051,
+              "bottom_z_mm": 0.00021434674899989403,
+              "shoulder_z_mm": 0.220094236952
+            },
+            "symmetric_mean_surface_distance_mm": 0.04479646063055139,
+            "sampled_p95_surface_distance_mm": 0.2803589279338207,
+            "sampled_max_surface_distance_mm": 0.41345572583739637,
+            "samples_per_direction": 6000,
+            "evaluation_seed": 101,
+            "surface_sampling": "Area-weighted analytic surfaces extracted from each STEP; no evaluation tessellation",
+            "note": "Independent STEP analytic-feature and sampled-surface comparison; no Boolean IoU or full GD&T claim"
+          },
+          "failed_dimensions": [
+            "outer_diameter_mm",
+            "rim_radius_mm"
+          ]
+        },
+        {
+          "iteration": 1,
+          "method": "soft_l1_robust_refit",
+          "parameters": {
+            "center_xy_mm": [
+              0.0003673075805596137,
+              -0.0007909968297916303
+            ],
+            "inner_diameter_mm": 32.00171967964587,
+            "outer_diameter_mm": 63.002022975968856,
+            "bottom_z_mm": -1.4997856532509117,
+            "shoulder_z_mm": -0.0009403578511366722,
+            "web_top_z_mm": 0.4252503474892455,
+            "rim_radius_mm": 1.5009477667907571,
+            "median_surface_residual_mm": 0.006909177066347194,
+            "explained_fraction": 0.9803666666666667
+          },
+          "drawing_verification": {
+            "passed": true,
+            "checks": [
+              {
+                "dimension": "outer_diameter_mm",
+                "measured_mm": 63.002022975968856,
+                "nominal_mm": 63.0,
+                "absolute_error_mm": 0.0020229759688561444,
+                "signed_error_mm": 0.0020229759688561444,
+                "tolerance_mm": 0.5,
+                "source_page": 1,
+                "qualifier": "AVG O.D.; fitted-cylinder diameter proxy",
+                "passed": true
+              },
+              {
+                "dimension": "inner_diameter_mm",
+                "measured_mm": 32.00171967964587,
+                "nominal_mm": 32.0,
+                "absolute_error_mm": 0.0017196796458733843,
+                "signed_error_mm": 0.0017196796458733843,
+                "tolerance_mm": 0.3,
+                "source_page": 1,
+                "qualifier": "AVG I.D.; fitted-cylinder diameter proxy",
+                "passed": true
+              },
+              {
+                "dimension": "rim_radius_mm",
+                "measured_mm": 1.5009477667907571,
+                "nominal_mm": 1.5,
+                "absolute_error_mm": 0.000947766790757143,
+                "signed_error_mm": 0.000947766790757143,
+                "tolerance_mm": 0.04,
+                "source_page": 1,
+                "qualifier": "2X R; both rims share a fitted radius in this model family",
+                "passed": true
+              },
+              {
+                "dimension": "web_thickness_mm",
+                "measured_mm": 1.9250360007401572,
+                "nominal_mm": 1.93,
+                "absolute_error_mm": 0.0049639992598427,
+                "signed_error_mm": -0.0049639992598427,
+                "tolerance_mm": 0.08,
+                "source_page": 2,
+                "qualifier": "Central web thickness, not maximum part height",
+                "passed": true
+              }
+            ],
+            "not_evaluated": [
+              "Datum-based surface profile",
+              "Free-state roundness and flatness",
+              "2X R0.1 MAX transitions",
+              "Circumference reference dimension (197.9)",
+              "General free-state compliance of the non-rigid part"
+            ],
+            "scope": "Four selected fitted-size checks only; no full GD&T or metrological uncertainty claim"
+          },
+          "evidence_coverage_passed": true,
+          "accepted": true,
+          "held_out_step_geometry": {
+            "reference_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.0,
+              "inner_diameter_mm": 32.0,
+              "rim_radius_mm": 1.5,
+              "web_thickness_mm": 1.925
+            },
+            "candidate_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.002022975968,
+              "inner_diameter_mm": 32.001719679646,
+              "rim_radius_mm": 1.500947766791,
+              "web_thickness_mm": 1.92503600074
+            },
+            "cad_feature_absolute_errors_mm": {
+              "outer_diameter_mm": 0.002022975968003493,
+              "inner_diameter_mm": 0.001719679646001282,
+              "rim_radius_mm": 0.0009477667910000598,
+              "web_thickness_mm": 3.600073999998621e-05,
+              "center_xy_mm": 0.0008721185948464283,
+              "bottom_z_mm": 0.00021434674899989403,
+              "shoulder_z_mm": 0.0009403578511377
+            },
+            "symmetric_mean_surface_distance_mm": 0.0003847196449990974,
+            "sampled_p95_surface_distance_mm": 0.0015168121153199905,
+            "sampled_max_surface_distance_mm": 0.003181492566977721,
+            "samples_per_direction": 6000,
+            "evaluation_seed": 101,
+            "surface_sampling": "Area-weighted analytic surfaces extracted from each STEP; no evaluation tessellation",
+            "note": "Independent STEP analytic-feature and sampled-surface comparison; no Boolean IoU or full GD&T claim"
+          },
+          "failed_dimensions": []
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "d94ee0bed48f06e94621a03b6b088e16fac1bf70607f0d31dfbe87a17bb2ec7e",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 30000,
+        "retained_points": 30000,
+        "seed": 44,
+        "noise_sigma_mm": 0.01,
+        "outlier_fraction": 0.02,
+        "outlier_count": 600,
+        "dropout_fraction": 0.0,
+        "sampling_method": "exact area-weighted analytic ring surfaces from STEP",
+        "linear_tessellation_tolerance_mm": null,
+        "angular_tessellation_tolerance_rad": null,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "outcome": "accepted_after_refit",
+      "iterations": [
+        {
+          "iteration": 0,
+          "method": "ordinary_least_squares",
+          "parameters": {
+            "center_xy_mm": [
+              0.06225856056921789,
+              0.08634711003690838
+            ],
+            "inner_diameter_mm": 32.0538845652829,
+            "outer_diameter_mm": 63.6668515514978,
+            "bottom_z_mm": -1.4999107171826203,
+            "shoulder_z_mm": -0.24937930942891334,
+            "web_top_z_mm": 0.42539346527764327,
+            "rim_radius_mm": 1.7443442759237033,
+            "median_surface_residual_mm": 0.010883827138069214,
+            "explained_fraction": 0.7602
+          },
+          "drawing_verification": {
+            "passed": false,
+            "checks": [
+              {
+                "dimension": "outer_diameter_mm",
+                "measured_mm": 63.6668515514978,
+                "nominal_mm": 63.0,
+                "absolute_error_mm": 0.6668515514977997,
+                "signed_error_mm": 0.6668515514977997,
+                "tolerance_mm": 0.5,
+                "source_page": 1,
+                "qualifier": "AVG O.D.; fitted-cylinder diameter proxy",
+                "passed": false
+              },
+              {
+                "dimension": "inner_diameter_mm",
+                "measured_mm": 32.0538845652829,
+                "nominal_mm": 32.0,
+                "absolute_error_mm": 0.053884565282899644,
+                "signed_error_mm": 0.053884565282899644,
+                "tolerance_mm": 0.3,
+                "source_page": 1,
+                "qualifier": "AVG I.D.; fitted-cylinder diameter proxy",
+                "passed": true
+              },
+              {
+                "dimension": "rim_radius_mm",
+                "measured_mm": 1.7443442759237033,
+                "nominal_mm": 1.5,
+                "absolute_error_mm": 0.24434427592370334,
+                "signed_error_mm": 0.24434427592370334,
+                "tolerance_mm": 0.04,
+                "source_page": 1,
+                "qualifier": "2X R; both rims share a fitted radius in this model family",
+                "passed": false
+              },
+              {
+                "dimension": "web_thickness_mm",
+                "measured_mm": 1.9253041824602635,
+                "nominal_mm": 1.93,
+                "absolute_error_mm": 0.004695817539736469,
+                "signed_error_mm": -0.004695817539736469,
+                "tolerance_mm": 0.08,
+                "source_page": 2,
+                "qualifier": "Central web thickness, not maximum part height",
+                "passed": true
+              }
+            ],
+            "not_evaluated": [
+              "Datum-based surface profile",
+              "Free-state roundness and flatness",
+              "2X R0.1 MAX transitions",
+              "Circumference reference dimension (197.9)",
+              "General free-state compliance of the non-rigid part"
+            ],
+            "scope": "Four selected fitted-size checks only; no full GD&T or metrological uncertainty claim"
+          },
+          "evidence_coverage_passed": false,
+          "accepted": false,
+          "held_out_step_geometry": {
+            "reference_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.0,
+              "inner_diameter_mm": 32.0,
+              "rim_radius_mm": 1.5,
+              "web_thickness_mm": 1.925
+            },
+            "candidate_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.666851551498,
+              "inner_diameter_mm": 32.053884565282,
+              "rim_radius_mm": 1.744344275924,
+              "web_thickness_mm": 1.925304182461
+            },
+            "cad_feature_absolute_errors_mm": {
+              "outer_diameter_mm": 0.6668515514979987,
+              "inner_diameter_mm": 0.053884565281997254,
+              "rim_radius_mm": 0.244344275924,
+              "web_thickness_mm": 0.0003041824609999466,
+              "center_xy_mm": 0.10645164055042777,
+              "bottom_z_mm": 8.928281700004703e-05,
+              "shoulder_z_mm": 0.249379309429
+            },
+            "symmetric_mean_surface_distance_mm": 0.048597656378413207,
+            "sampled_p95_surface_distance_mm": 0.3010641920289952,
+            "sampled_max_surface_distance_mm": 0.48299827597764583,
+            "samples_per_direction": 6000,
+            "evaluation_seed": 101,
+            "surface_sampling": "Area-weighted analytic surfaces extracted from each STEP; no evaluation tessellation",
+            "note": "Independent STEP analytic-feature and sampled-surface comparison; no Boolean IoU or full GD&T claim"
+          },
+          "failed_dimensions": [
+            "outer_diameter_mm",
+            "rim_radius_mm"
+          ]
+        },
+        {
+          "iteration": 1,
+          "method": "soft_l1_robust_refit",
+          "parameters": {
+            "center_xy_mm": [
+              0.00028164633084733714,
+              0.00031220030190596274
+            ],
+            "inner_diameter_mm": 32.00014039185921,
+            "outer_diameter_mm": 63.00024916824158,
+            "bottom_z_mm": -1.4999107171826203,
+            "shoulder_z_mm": -0.0004655492845199546,
+            "web_top_z_mm": 0.42539346527764327,
+            "rim_radius_mm": 1.5006942245502228,
+            "median_surface_residual_mm": 0.0070753582078149,
+            "explained_fraction": 0.9805
+          },
+          "drawing_verification": {
+            "passed": true,
+            "checks": [
+              {
+                "dimension": "outer_diameter_mm",
+                "measured_mm": 63.00024916824158,
+                "nominal_mm": 63.0,
+                "absolute_error_mm": 0.00024916824158083273,
+                "signed_error_mm": 0.00024916824158083273,
+                "tolerance_mm": 0.5,
+                "source_page": 1,
+                "qualifier": "AVG O.D.; fitted-cylinder diameter proxy",
+                "passed": true
+              },
+              {
+                "dimension": "inner_diameter_mm",
+                "measured_mm": 32.00014039185921,
+                "nominal_mm": 32.0,
+                "absolute_error_mm": 0.00014039185921177477,
+                "signed_error_mm": 0.00014039185921177477,
+                "tolerance_mm": 0.3,
+                "source_page": 1,
+                "qualifier": "AVG I.D.; fitted-cylinder diameter proxy",
+                "passed": true
+              },
+              {
+                "dimension": "rim_radius_mm",
+                "measured_mm": 1.5006942245502228,
+                "nominal_mm": 1.5,
+                "absolute_error_mm": 0.0006942245502228328,
+                "signed_error_mm": 0.0006942245502228328,
+                "tolerance_mm": 0.04,
+                "source_page": 1,
+                "qualifier": "2X R; both rims share a fitted radius in this model family",
+                "passed": true
+              },
+              {
+                "dimension": "web_thickness_mm",
+                "measured_mm": 1.9253041824602635,
+                "nominal_mm": 1.93,
+                "absolute_error_mm": 0.004695817539736469,
+                "signed_error_mm": -0.004695817539736469,
+                "tolerance_mm": 0.08,
+                "source_page": 2,
+                "qualifier": "Central web thickness, not maximum part height",
+                "passed": true
+              }
+            ],
+            "not_evaluated": [
+              "Datum-based surface profile",
+              "Free-state roundness and flatness",
+              "2X R0.1 MAX transitions",
+              "Circumference reference dimension (197.9)",
+              "General free-state compliance of the non-rigid part"
+            ],
+            "scope": "Four selected fitted-size checks only; no full GD&T or metrological uncertainty claim"
+          },
+          "evidence_coverage_passed": true,
+          "accepted": true,
+          "held_out_step_geometry": {
+            "reference_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.0,
+              "inner_diameter_mm": 32.0,
+              "rim_radius_mm": 1.5,
+              "web_thickness_mm": 1.925
+            },
+            "candidate_cad_dimensions_mm": {
+              "outer_diameter_mm": 63.000249168242,
+              "inner_diameter_mm": 32.00014039186,
+              "rim_radius_mm": 1.50069422455,
+              "web_thickness_mm": 1.925304182461
+            },
+            "cad_feature_absolute_errors_mm": {
+              "outer_diameter_mm": 0.00024916824200005294,
+              "inner_diameter_mm": 0.0001403918600004772,
+              "rim_radius_mm": 0.0006942245499999,
+              "web_thickness_mm": 0.0003041824609999466,
+              "center_xy_mm": 0.00042046841045427453,
+              "bottom_z_mm": 8.928281700004703e-05,
+              "shoulder_z_mm": 0.0004655492845197
+            },
+            "symmetric_mean_surface_distance_mm": 0.0002641923552878594,
+            "sampled_p95_surface_distance_mm": 0.0006784526564132241,
+            "sampled_max_surface_distance_mm": 0.001680493386801185,
+            "samples_per_direction": 6000,
+            "evaluation_seed": 101,
+            "surface_sampling": "Area-weighted analytic surfaces extracted from each STEP; no evaluation tessellation",
+            "note": "Independent STEP analytic-feature and sampled-surface comparison; no Boolean IoU or full GD&T claim"
+          },
+          "failed_dimensions": []
+        }
+      ]
+    }
+  ],
+  "live_drawing_attempts": [
+    {
+      "model": "qwen/qwen3-vl-8b-instruct",
+      "proposal": {
+        "units": "mm",
+        "dimensions": {
+          "outer_diameter_mm": {
+            "nominal": 63.0,
+            "tolerance": 0.0,
+            "page": 1,
+            "qualifier": "AVG (O.D.)"
+          },
+          "inner_diameter_mm": {
+            "nominal": 32.0,
+            "tolerance": 0.0,
+            "page": 1,
+            "qualifier": "AVG (I.D.)"
+          },
+          "rim_radius_mm": {
+            "nominal": 1.5,
+            "tolerance": 0.0,
+            "page": 1,
+            "qualifier": "2X"
+          },
+          "web_thickness_mm": {
+            "nominal": 1.93,
+            "tolerance": 0.0,
+            "page": 2,
+            "qualifier": "free-state"
+          }
+        },
+        "uncertainties": [
+          "The web thickness is not explicitly labeled as 'web thickness' in the drawing; it is labeled as a dimension '1.93 \u00b10.08' on Page 2, which is the maximum part height, not the web thickness. The drawing does not provide a callout for the web thickness."
+        ]
+      },
+      "review": {
+        "accepted": false,
+        "discrepancies": [
+          "outer_diameter_mm.tolerance",
+          "inner_diameter_mm.tolerance",
+          "rim_radius_mm.tolerance",
+          "web_thickness_mm.tolerance",
+          "unresolved_transcription_uncertainty"
+        ],
+        "review": "Numeric values, source units, and source pages checked against visually reviewed callouts; free text is not verified"
+      },
+      "latency_seconds": 12.179390250003053,
+      "reported_cost_usd": 0.00176325
+    },
+    {
+      "model": "qwen/qwen3-vl-8b-instruct",
+      "proposal": {
+        "units": "mm",
+        "dimensions": {
+          "outer_diameter_mm": {
+            "nominal": 63.0,
+            "tolerance": 0.0,
+            "page": 1,
+            "qualifier": "AVG (O.D.)"
+          },
+          "inner_diameter_mm": {
+            "nominal": 32.0,
+            "tolerance": 0.0,
+            "page": 1,
+            "qualifier": "AVG (I.D.)"
+          },
+          "rim_radius_mm": {
+            "nominal": 1.5,
+            "tolerance": 0.0,
+            "page": 1,
+            "qualifier": "2X"
+          },
+          "web_thickness_mm": {
+            "nominal": 1.93,
+            "tolerance": 0.0,
+            "page": 2,
+            "qualifier": "free-state"
+          }
+        },
+        "uncertainties": [
+          "outer_diameter_mm.tolerance",
+          "inner_diameter_mm.tolerance",
+          "rim_radius_mm.tolerance",
+          "web_thickness_mm.tolerance"
+        ]
+      },
+      "review": {
+        "accepted": false,
+        "discrepancies": [
+          "outer_diameter_mm.tolerance",
+          "inner_diameter_mm.tolerance",
+          "rim_radius_mm.tolerance",
+          "web_thickness_mm.tolerance",
+          "unresolved_transcription_uncertainty"
+        ],
+        "review": "Numeric values, source units, and source pages checked against visually reviewed callouts; free text is not verified"
+      },
+      "latency_seconds": 8.772997707998002,
+      "reported_cost_usd": 0.00319375
+    }
+  ]
+}

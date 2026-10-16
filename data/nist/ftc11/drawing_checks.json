@@ -1,0 +1,13 @@
+{
+  "part_id": "nist_ftc_11_asme1_rb",
+  "units": "mm",
+  "source": "drawing.pdf, NIST FTC-11 Rev B, visually reviewed transcription",
+  "dimensions": {
+    "outer_diameter_mm": {"nominal": 63.0, "tolerance": 0.5, "page": 1, "qualifier": "AVG O.D.; fitted-cylinder diameter proxy"},
+    "inner_diameter_mm": {"nominal": 32.0, "tolerance": 0.3, "page": 1, "qualifier": "AVG I.D.; fitted-cylinder diameter proxy"},
+    "rim_radius_mm": {"nominal": 1.5, "tolerance": 0.04, "page": 1, "qualifier": "2X R; both rims share a fitted radius in this model family"},
+    "web_thickness_mm": {"nominal": 1.93, "tolerance": 0.08, "page": 2, "qualifier": "Central web thickness, not maximum part height"}
+  },
+  "not_evaluated": ["Datum-based surface profile", "Free-state roundness and flatness", "2X R0.1 MAX transitions", "Circumference reference dimension (197.9)", "General free-state compliance of the non-rigid part"],
+  "scope": "Selected size checks only; not full GD&T or manufacturing qualification"
+}

@@ -1,0 +1,818 @@
+{
+  "part_id": "nist_ctc_05_asme1_rd",
+  "provenance": {
+    "id": "nist_ctc_05_asme1_rd",
+    "source_page": "https://www.nist.gov/ctl/smart-connected-systems-division/smart-connected-manufacturing-systems-group/mbe-pmi-0",
+    "archive_filename": "ctc_definitions.zip",
+    "archive_sha256": "79ebc74d99eb05c0d23de1c1d8730651fa2a24def56f647bac21dd439ec40690",
+    "files": {
+      "reference.step": {
+        "archive_member": "NIST_MBE_PMI_CTC_Definitions/nist_ctc_05_asme1_rd.stp",
+        "sha256": "edc5bb91c00a0fe6d1c76439130f6deabfef851e910538e8f23daf5dfe70f9e7"
+      },
+      "drawing.pdf": {
+        "archive_member": "NIST_MBE_PMI_CTC_Definitions/nist_ctc_05_asme1_rd.pdf",
+        "sha256": "1357a2aec060ab6ce963cc0ad974f0d693287bd2cb745ca409a6254604359313"
+      }
+    },
+    "acknowledgement": "Geometry and drawing supplied by NIST; no endorsement implied."
+  },
+  "drawing_spec": {
+    "part_id": "nist_ctc_05_asme1_rd",
+    "source": "drawing.pdf page 2, visually reviewed diameter callout",
+    "units": "inch",
+    "checks": [
+      {
+        "feature": "rear_bore_diameter",
+        "nominal": 10.0,
+        "tolerance_plus_minus": 0.001,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254
+      }
+    ],
+    "not_evaluated": [
+      "GD&T datum relationships",
+      "free-form surfaces",
+      "other geometry without explicit size callouts"
+    ],
+    "note": "No drawing nominal is supplied to feature fitting. This PDF is primarily PMI annotation; most nominal dimensions require CAD."
+  },
+  "reference_face_count": 209,
+  "runs": [
+    {
+      "resolution": "coarse",
+      "seed": 42,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "edc5bb91c00a0fe6d1c76439130f6deabfef851e910538e8f23daf5dfe70f9e7",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 120000,
+        "retained_points": 120000,
+        "seed": 42,
+        "noise_sigma_mm": 0.03,
+        "outlier_fraction": 0.02,
+        "outlier_count": 2400,
+        "dropout_fraction": 0.0,
+        "sampling_method": "area-weighted surface sampling of STEP tessellation",
+        "linear_tessellation_tolerance_mm": 0.02,
+        "angular_tessellation_tolerance_rad": 0.1,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "features": [
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0001296297293574657,
+              -0.0002529439990618718
+            ],
+            "radius_mm": 126.97373561921111,
+            "z_low_mm": 12.6705980849524,
+            "z_high_mm": 96.41750918946403,
+            "support_points": 9252,
+            "radial_rms_mm": 0.032430971794228415,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 127.0
+          },
+          "diameter_error_mm": -0.05252876157777564,
+          "center_error_mm": 0.0002842262011052148
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.0002846415064240664,
+              -0.000398620708757423
+            ],
+            "radius_mm": 152.3711219162621,
+            "z_low_mm": 32.99745776389284,
+            "z_high_mm": 117.66508213150578,
+            "support_points": 10266,
+            "radial_rms_mm": 0.03284499008324464,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 152.39999999999998
+          },
+          "diameter_error_mm": -0.05775616747575896,
+          "center_error_mm": 0.0004898155332669964
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.00022826993582361824,
+              0.0007278296298583885
+            ],
+            "radius_mm": 31.743176136246916,
+            "z_low_mm": 287.94764297708275,
+            "z_high_mm": 471.6926722485846,
+            "support_points": 5112,
+            "radial_rms_mm": 0.03029220730877499,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 31.75
+          },
+          "diameter_error_mm": -0.01364772750616794,
+          "center_error_mm": 0.0007627864273181042
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.0050776343991910085,
+              -0.010835102295916735
+            ],
+            "radius_mm": 279.3540249648683,
+            "z_low_mm": 3.6123954772524143,
+            "z_high_mm": 21.44060780360779,
+            "support_points": 3070,
+            "radial_rms_mm": 0.042328771387050095,
+            "angular_bins": 20
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 279.4
+          },
+          "diameter_error_mm": -0.09195007026335134,
+          "center_error_mm": 0.011965860305670793
+        }
+      ],
+      "bore_check": {
+        "measured_diameter_mm": 253.94747123842222,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254,
+        "passed": false,
+        "association": "held-out CAD-assisted feature association"
+      },
+      "full_reconstruction_accepted": false
+    },
+    {
+      "resolution": "coarse",
+      "seed": 43,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "edc5bb91c00a0fe6d1c76439130f6deabfef851e910538e8f23daf5dfe70f9e7",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 120000,
+        "retained_points": 120000,
+        "seed": 43,
+        "noise_sigma_mm": 0.03,
+        "outlier_fraction": 0.02,
+        "outlier_count": 2400,
+        "dropout_fraction": 0.0,
+        "sampling_method": "area-weighted surface sampling of STEP tessellation",
+        "linear_tessellation_tolerance_mm": 0.02,
+        "angular_tessellation_tolerance_rad": 0.1,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "features": [
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0003455473751081851,
+              -0.0002483110500578956
+            ],
+            "radius_mm": 126.97378587613377,
+            "z_low_mm": 12.823912557254877,
+            "z_high_mm": 96.21050845749643,
+            "support_points": 9079,
+            "radial_rms_mm": 0.031976818563909416,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 127.0
+          },
+          "diameter_error_mm": -0.05242824773245047,
+          "center_error_mm": 0.0004255130621085697
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.00022820033429477068,
+              0.0001661595854520076
+            ],
+            "radius_mm": 152.37120514177704,
+            "z_low_mm": 32.93952052053395,
+            "z_high_mm": 117.58109353661706,
+            "support_points": 10312,
+            "radial_rms_mm": 0.033515409029857654,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 152.39999999999998
+          },
+          "diameter_error_mm": -0.05758971644587518,
+          "center_error_mm": 0.00028228425462612704
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0007938690493415767,
+              -0.00048266655212994027
+            ],
+            "radius_mm": 31.743000649245015,
+            "z_low_mm": 288.40800214044725,
+            "z_high_mm": 471.8368644486744,
+            "support_points": 5066,
+            "radial_rms_mm": 0.030527248886988694,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 31.75
+          },
+          "diameter_error_mm": -0.01399870150996918,
+          "center_error_mm": 0.0009290829177460444
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.0004322083010897192,
+              0.0001816509643751569
+            ],
+            "radius_mm": 279.3442521616036,
+            "z_low_mm": 3.7502201599128657,
+            "z_high_mm": 21.836752826695978,
+            "support_points": 3136,
+            "radial_rms_mm": 0.04010374330403546,
+            "angular_bins": 20
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 279.4
+          },
+          "diameter_error_mm": -0.11149567679274242,
+          "center_error_mm": 0.0004688294875424176
+        }
+      ],
+      "bore_check": {
+        "measured_diameter_mm": 253.94757175226755,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254,
+        "passed": false,
+        "association": "held-out CAD-assisted feature association"
+      },
+      "full_reconstruction_accepted": false
+    },
+    {
+      "resolution": "coarse",
+      "seed": 44,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "edc5bb91c00a0fe6d1c76439130f6deabfef851e910538e8f23daf5dfe70f9e7",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 120000,
+        "retained_points": 120000,
+        "seed": 44,
+        "noise_sigma_mm": 0.03,
+        "outlier_fraction": 0.02,
+        "outlier_count": 2400,
+        "dropout_fraction": 0.0,
+        "sampling_method": "area-weighted surface sampling of STEP tessellation",
+        "linear_tessellation_tolerance_mm": 0.02,
+        "angular_tessellation_tolerance_rad": 0.1,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "features": [
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.0002610545484293432,
+              0.0004851923952982567
+            ],
+            "radius_mm": 152.37161204813182,
+            "z_low_mm": 33.10094373056858,
+            "z_high_mm": 117.63118068507401,
+            "support_points": 10070,
+            "radial_rms_mm": 0.03312041246646142,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 152.39999999999998
+          },
+          "diameter_error_mm": -0.05677590373630892,
+          "center_error_mm": 0.0005509638261364426
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0006281725567904391,
+              -0.000495869131509784
+            ],
+            "radius_mm": 126.97350077476713,
+            "z_low_mm": 12.559125376533917,
+            "z_high_mm": 96.19460100734689,
+            "support_points": 9119,
+            "radial_rms_mm": 0.032080403508579707,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 127.0
+          },
+          "diameter_error_mm": -0.05299845046573637,
+          "center_error_mm": 0.0008003042900602901
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -9.595298431141228e-05,
+              -0.0011060300314625967
+            ],
+            "radius_mm": 31.743767577788496,
+            "z_low_mm": 287.2393393649945,
+            "z_high_mm": 472.11251749419205,
+            "support_points": 5154,
+            "radial_rms_mm": 0.030383327494204408,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 31.75
+          },
+          "diameter_error_mm": -0.012464844423007548,
+          "center_error_mm": 0.0011101844016628132
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0015703198539449652,
+              -0.005891957662681314
+            ],
+            "radius_mm": 279.33734419199817,
+            "z_low_mm": 3.4741799768054,
+            "z_high_mm": 21.693713952858378,
+            "support_points": 3127,
+            "radial_rms_mm": 0.03965325309884855,
+            "angular_bins": 20
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 279.4
+          },
+          "diameter_error_mm": -0.1253116160036143,
+          "center_error_mm": 0.00609762818992129
+        }
+      ],
+      "bore_check": {
+        "measured_diameter_mm": 253.94700154953426,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254,
+        "passed": false,
+        "association": "held-out CAD-assisted feature association"
+      },
+      "full_reconstruction_accepted": false
+    },
+    {
+      "resolution": "fine",
+      "seed": 42,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "edc5bb91c00a0fe6d1c76439130f6deabfef851e910538e8f23daf5dfe70f9e7",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 120000,
+        "retained_points": 120000,
+        "seed": 42,
+        "noise_sigma_mm": 0.03,
+        "outlier_fraction": 0.02,
+        "outlier_count": 2400,
+        "dropout_fraction": 0.0,
+        "sampling_method": "area-weighted surface sampling of STEP tessellation",
+        "linear_tessellation_tolerance_mm": 0.002,
+        "angular_tessellation_tolerance_rad": 0.03,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "features": [
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.0003749655985760574,
+              -0.00020407931581834703
+            ],
+            "radius_mm": 152.39718834500846,
+            "z_low_mm": 33.20194076725644,
+            "z_high_mm": 117.61036460461202,
+            "support_points": 10214,
+            "radial_rms_mm": 0.029799114692324654,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 152.39999999999998
+          },
+          "diameter_error_mm": -0.005623309983036506,
+          "center_error_mm": 0.00042690463485465423
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0003914943785822154,
+              -0.0001884216161927503
+            ],
+            "radius_mm": 126.99777609340738,
+            "z_low_mm": 12.667858485112504,
+            "z_high_mm": 96.58337105484823,
+            "support_points": 9232,
+            "radial_rms_mm": 0.03023777319923829,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 127.0
+          },
+          "diameter_error_mm": -0.004447813185237237,
+          "center_error_mm": 0.0004344773341730994
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0001276529829429319,
+              0.0006672579275040319
+            ],
+            "radius_mm": 31.749090531526807,
+            "z_low_mm": 287.94044289840946,
+            "z_high_mm": 472.2963521949816,
+            "support_points": 5133,
+            "radial_rms_mm": 0.030077644878363417,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 31.75
+          },
+          "diameter_error_mm": -0.0018189369463854632,
+          "center_error_mm": 0.000679358834395494
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.0004650965909929055,
+              0.00019452269807971763
+            ],
+            "radius_mm": 279.3960862148795,
+            "z_low_mm": 3.4546783596993973,
+            "z_high_mm": 22.10361783777949,
+            "support_points": 3044,
+            "radial_rms_mm": 0.030503308021947343,
+            "angular_bins": 20
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 279.4
+          },
+          "diameter_error_mm": -0.007827570240920068,
+          "center_error_mm": 0.0005041368058587223
+        }
+      ],
+      "bore_check": {
+        "measured_diameter_mm": 253.99555218681476,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254,
+        "passed": true,
+        "association": "held-out CAD-assisted feature association"
+      },
+      "full_reconstruction_accepted": false
+    },
+    {
+      "resolution": "fine",
+      "seed": 43,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "edc5bb91c00a0fe6d1c76439130f6deabfef851e910538e8f23daf5dfe70f9e7",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 120000,
+        "retained_points": 120000,
+        "seed": 43,
+        "noise_sigma_mm": 0.03,
+        "outlier_fraction": 0.02,
+        "outlier_count": 2400,
+        "dropout_fraction": 0.0,
+        "sampling_method": "area-weighted surface sampling of STEP tessellation",
+        "linear_tessellation_tolerance_mm": 0.002,
+        "angular_tessellation_tolerance_rad": 0.03,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "features": [
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0003862602043423754,
+              8.970250579998556e-06
+            ],
+            "radius_mm": 126.99787224011973,
+            "z_low_mm": 12.698560506880387,
+            "z_high_mm": 96.35941740024184,
+            "support_points": 9132,
+            "radial_rms_mm": 0.029811875836887897,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 127.0
+          },
+          "diameter_error_mm": -0.0042555197605338435,
+          "center_error_mm": 0.00038636434987467664
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.00024111587169633694,
+              0.000365520142462559
+            ],
+            "radius_mm": 152.39722257860973,
+            "z_low_mm": 32.99866247596422,
+            "z_high_mm": 117.54614348566095,
+            "support_points": 10320,
+            "radial_rms_mm": 0.030242401073832113,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 152.39999999999998
+          },
+          "diameter_error_mm": -0.005554842780497893,
+          "center_error_mm": 0.00043788336133008507
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0008658002846080693,
+              -0.0005884031545120078
+            ],
+            "radius_mm": 31.748910053173883,
+            "z_low_mm": 288.8262964080771,
+            "z_high_mm": 471.89387050486454,
+            "support_points": 5063,
+            "radial_rms_mm": 0.030383020263208528,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 31.75
+          },
+          "diameter_error_mm": -0.0021798936522330337,
+          "center_error_mm": 0.0010468182292390096
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.001289454670131543,
+              -0.0003832233608953474
+            ],
+            "radius_mm": 279.3947555469714,
+            "z_low_mm": 3.552614436356394,
+            "z_high_mm": 21.848924993377594,
+            "support_points": 3126,
+            "radial_rms_mm": 0.03047164469023458,
+            "angular_bins": 20
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 279.4
+          },
+          "diameter_error_mm": -0.01048890605716224,
+          "center_error_mm": 0.00134519645058258
+        }
+      ],
+      "bore_check": {
+        "measured_diameter_mm": 253.99574448023947,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254,
+        "passed": true,
+        "association": "held-out CAD-assisted feature association"
+      },
+      "full_reconstruction_accepted": false
+    },
+    {
+      "resolution": "fine",
+      "seed": 44,
+      "scan": {
+        "kind": "synthetic full-surface samples, not a physical scanner simulation",
+        "source_step_sha256": "edc5bb91c00a0fe6d1c76439130f6deabfef851e910538e8f23daf5dfe70f9e7",
+        "units": "mm",
+        "unit_handling": "OpenCascade STEP importer converts source units to mm",
+        "requested_points": 120000,
+        "retained_points": 120000,
+        "seed": 44,
+        "noise_sigma_mm": 0.03,
+        "outlier_fraction": 0.02,
+        "outlier_count": 2400,
+        "dropout_fraction": 0.0,
+        "sampling_method": "area-weighted surface sampling of STEP tessellation",
+        "linear_tessellation_tolerance_mm": 0.002,
+        "angular_tessellation_tolerance_rad": 0.03,
+        "limitations": [
+          "Uniform surface sampling; no ray visibility, occlusion, or scanner calibration",
+          "Random dropout is not a model of missing views",
+          "Outliers replace random samples inside an expanded bounding box"
+        ]
+      },
+      "features": [
+        {
+          "measured": {
+            "center_xy_mm": [
+              3.002988107992534e-05,
+              0.0006328403004715444
+            ],
+            "radius_mm": 152.39777290656292,
+            "z_low_mm": 33.20255534751688,
+            "z_high_mm": 117.64408388475107,
+            "support_points": 10085,
+            "radial_rms_mm": 0.030166542682387693,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 152.39999999999998
+          },
+          "diameter_error_mm": -0.004454186874113475,
+          "center_error_mm": 0.000633552396932242
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -0.0006811663376514829,
+              -0.00047175526351509443
+            ],
+            "radius_mm": 126.99777796921624,
+            "z_low_mm": 12.555246510725228,
+            "z_high_mm": 96.45392377470786,
+            "support_points": 9145,
+            "radial_rms_mm": 0.0302980168485116,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 127.0
+          },
+          "diameter_error_mm": -0.004444061567511426,
+          "center_error_mm": 0.0008285774605935949
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              -3.576499361517632e-05,
+              -0.0010261597969025349
+            ],
+            "radius_mm": 31.74971392476041,
+            "z_low_mm": 287.41959542040166,
+            "z_high_mm": 471.93214049297256,
+            "support_points": 5147,
+            "radial_rms_mm": 0.03016010451911794,
+            "angular_bins": 24
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 31.75
+          },
+          "diameter_error_mm": -0.0005721504791793564,
+          "center_error_mm": 0.0010267828706924094
+        },
+        {
+          "measured": {
+            "center_xy_mm": [
+              0.0012040211835795697,
+              -0.0009660987583848341
+            ],
+            "radius_mm": 279.3944654013727,
+            "z_low_mm": 3.5967400932701215,
+            "z_high_mm": 21.954621770745575,
+            "support_points": 3128,
+            "radial_rms_mm": 0.029979808264217204,
+            "angular_bins": 20
+          },
+          "held_out_reference": {
+            "center_xy_mm": [
+              0.0,
+              0.0
+            ],
+            "radius_mm": 279.4
+          },
+          "diameter_error_mm": -0.011069197254528262,
+          "center_error_mm": 0.001543701338167803
+        }
+      ],
+      "bore_check": {
+        "measured_diameter_mm": 253.9955559384325,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254,
+        "passed": true,
+        "association": "held-out CAD-assisted feature association"
+      },
+      "full_reconstruction_accepted": false
+    }
+  ],
+  "full_reconstruction_accepted": false,
+  "outcome": "partial_cylindrical_feature_recovery_only",
+  "measurement_uses_reference_or_drawing": false,
+  "resolution_sweep": "Simulation fidelity audit, not an autonomous reconstruction correction",
+  "limitations": [
+    "Aligned Z cylinders only; no general pose recovery",
+    "Independent open cylinder faces exported, not a closed solid",
+    "Axial bounds are sample quantiles, not fitted shoulder dimensions",
+    "Holes, flats, counterbores, blends, cavity closure, and GD&T not fully reconstructed",
+    "Drawing feature association uses held-out CAD; no autonomous correspondence claim",
+    "No AI interpretation or repair is executed by this benchmark",
+    "Surface sampling includes hidden surfaces; no physical scanner occlusion model"
+  ]
+}

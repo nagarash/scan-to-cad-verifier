@@ -1,0 +1,819 @@
+{
+  "source": "Recorded local synthetic benchmark and three live model calls",
+  "benchmark": {
+    "environment": {
+      "python": "3.12.14",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "cadquery": "2.8.0",
+      "cadquery-ocp": "7.9.3.1.1",
+      "trimesh": "5.1.1"
+    },
+    "fit_settings": {
+      "distance_tolerance_mm": 0.2,
+      "cluster_radius_mm": 1.5
+    },
+    "passed_cases": 6,
+    "total_cases": 6
+  },
+  "benchmark_cases": [
+    {
+      "part": "four_hole_plate",
+      "seed": 42,
+      "noise_sigma_mm": 0.05,
+      "point_count": 12000,
+      "verification": {
+        "reference": {
+          "extents_mm": [
+            60.0,
+            40.0,
+            6.0
+          ],
+          "center_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "bottom_z_mm": 0.0,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -20.0,
+                -10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                -20.0,
+                10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                20.0,
+                -10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                20.0,
+                10.0
+              ],
+              "diameter_mm": 6.0
+            }
+          ],
+          "volume_mm3": 13721.415986824588
+        },
+        "reconstructed": {
+          "extents_mm": [
+            59.999951532239,
+            39.994845078430004,
+            5.999128176749493
+          ],
+          "center_xy_mm": [
+            -0.0018386900704996378,
+            0.0007969239750025281
+          ],
+          "bottom_z_mm": 0.0004262141635063,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -20.00003495446,
+                -10.00846613643
+              ],
+              "diameter_mm": 6.003171404306
+            },
+            {
+              "center_xy_mm": [
+                -19.99037399989,
+                10.007160782269
+              ],
+              "diameter_mm": 5.996024395862
+            },
+            {
+              "center_xy_mm": [
+                19.997893985777,
+                -10.00944423242
+              ],
+              "diameter_mm": 5.987122642952
+            },
+            {
+              "center_xy_mm": [
+                19.999478344433,
+                9.997246543639
+              ],
+              "diameter_mm": 5.99565341315
+            }
+          ],
+          "volume_mm3": 13718.573407897873
+        },
+        "extent_absolute_errors_mm": [
+          4.8467760997539244e-05,
+          0.005154921569996418,
+          0.0008718232505069423
+        ],
+        "plate_center_error_mm": 0.0020039633223409535,
+        "bottom_z_error_mm": 0.0004262141635063,
+        "hole_matches": [
+          {
+            "reference_index": 0,
+            "predicted_index": 0,
+            "center_error_mm": 0.008466208588597835,
+            "diameter_error_mm": 0.0031714043060002695
+          },
+          {
+            "reference_index": 1,
+            "predicted_index": 1,
+            "center_error_mm": 0.011997361410816578,
+            "diameter_error_mm": 0.003975604137999689
+          },
+          {
+            "reference_index": 2,
+            "predicted_index": 2,
+            "center_error_mm": 0.009676198732480247,
+            "diameter_error_mm": 0.012877357047999638
+          },
+          {
+            "reference_index": 3,
+            "predicted_index": 3,
+            "center_error_mm": 0.002802435808812855,
+            "diameter_error_mm": 0.004346586849999667
+          }
+        ],
+        "hole_precision": 1.0,
+        "hole_recall": 1.0,
+        "hole_f1": 1.0,
+        "missing_holes": 0,
+        "extra_holes": 0,
+        "missing_volume_mm3": 5.09624058926741,
+        "excess_volume_mm3": 2.253661662499841,
+        "symmetric_volume_difference_fraction": 0.0005356518787000325,
+        "solid_iou": 0.9994644360845132,
+        "thresholds": {
+          "dimension_tolerance_mm": 0.1,
+          "max_volume_difference_fraction": 0.01,
+          "hole_match_distance_mm": 1.0
+        },
+        "passed": true
+      }
+    },
+    {
+      "part": "four_hole_plate",
+      "seed": 43,
+      "noise_sigma_mm": 0.05,
+      "point_count": 12000,
+      "verification": {
+        "reference": {
+          "extents_mm": [
+            60.0,
+            40.0,
+            6.0
+          ],
+          "center_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "bottom_z_mm": 0.0,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -20.0,
+                -10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                -20.0,
+                10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                20.0,
+                -10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                20.0,
+                10.0
+              ],
+              "diameter_mm": 6.0
+            }
+          ],
+          "volume_mm3": 13721.415986824588
+        },
+        "reconstructed": {
+          "extents_mm": [
+            59.999672776356,
+            39.991056509782,
+            5.996757547685482
+          ],
+          "center_xy_mm": [
+            0.00017553141800163985,
+            0.002035608221000018
+          ],
+          "bottom_z_mm": 0.001543838183518,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -19.99848991556,
+                -10.0013107334
+              ],
+              "diameter_mm": 5.996897152498
+            },
+            {
+              "center_xy_mm": [
+                -19.99492357878,
+                9.994719264435
+              ],
+              "diameter_mm": 5.99901750762
+            },
+            {
+              "center_xy_mm": [
+                19.99796030831,
+                9.995953175088
+              ],
+              "diameter_mm": 6.003964440848
+            },
+            {
+              "center_xy_mm": [
+                20.001647161754,
+                -9.99767284093
+              ],
+              "diameter_mm": 6.004504549856
+            }
+          ],
+          "volume_mm3": 13710.456448620176
+        },
+        "extent_absolute_errors_mm": [
+          0.00032722364399973003,
+          0.00894349021800167,
+          0.0032424523145175854
+        ],
+        "plate_center_error_mm": 0.002043162281393361,
+        "bottom_z_error_mm": 0.001543838183518,
+        "hole_matches": [
+          {
+            "reference_index": 0,
+            "predicted_index": 0,
+            "center_error_mm": 0.0019995942242878855,
+            "diameter_error_mm": 0.0031028475020002944
+          },
+          {
+            "reference_index": 1,
+            "predicted_index": 1,
+            "center_error_mm": 0.007325040649055989,
+            "diameter_error_mm": 0.000982492380000366
+          },
+          {
+            "reference_index": 2,
+            "predicted_index": 3,
+            "center_error_mm": 0.0028511070097282515,
+            "diameter_error_mm": 0.004504549855999684
+          },
+          {
+            "reference_index": 3,
+            "predicted_index": 2,
+            "center_error_mm": 0.0045317914844627775,
+            "diameter_error_mm": 0.0039644408479997395
+          }
+        ],
+        "hole_precision": 1.0,
+        "hole_recall": 1.0,
+        "hole_f1": 1.0,
+        "missing_holes": 0,
+        "extra_holes": 0,
+        "missing_volume_mm3": 11.513214166924627,
+        "excess_volume_mm3": 0.5536759625351166,
+        "symmetric_volume_difference_fraction": 0.0008794201809089139,
+        "solid_iou": 0.9991206153033477,
+        "thresholds": {
+          "dimension_tolerance_mm": 0.1,
+          "max_volume_difference_fraction": 0.01,
+          "hole_match_distance_mm": 1.0
+        },
+        "passed": true
+      }
+    },
+    {
+      "part": "four_hole_plate",
+      "seed": 44,
+      "noise_sigma_mm": 0.05,
+      "point_count": 12000,
+      "verification": {
+        "reference": {
+          "extents_mm": [
+            60.0,
+            40.0,
+            6.0
+          ],
+          "center_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "bottom_z_mm": 0.0,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -20.0,
+                -10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                -20.0,
+                10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                20.0,
+                -10.0
+              ],
+              "diameter_mm": 6.0
+            },
+            {
+              "center_xy_mm": [
+                20.0,
+                10.0
+              ],
+              "diameter_mm": 6.0
+            }
+          ],
+          "volume_mm3": 13721.415986824588
+        },
+        "reconstructed": {
+          "extents_mm": [
+            60.000264512399,
+            39.998631193042996,
+            5.997338635319123
+          ],
+          "center_xy_mm": [
+            -7.653374050065054e-05,
+            -0.0024213905784993273
+          ],
+          "bottom_z_mm": 0.001919577558877,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -20.00027145972,
+                10.006275589799
+              ],
+              "diameter_mm": 5.999371864826
+            },
+            {
+              "center_xy_mm": [
+                -19.99783616661,
+                -9.992208286186
+              ],
+              "diameter_mm": 6.006125054886
+            },
+            {
+              "center_xy_mm": [
+                19.993568404418,
+                10.001861352432
+              ],
+              "diameter_mm": 6.000155197894
+            },
+            {
+              "center_xy_mm": [
+                20.005119714579,
+                -10.0024921303
+              ],
+              "diameter_mm": 5.99763840695
+            }
+          ],
+          "volume_mm3": 13714.714408360463
+        },
+        "extent_absolute_errors_mm": [
+          0.0002645123989992726,
+          0.0013688069570036987,
+          0.0026613646808772984
+        ],
+        "plate_center_error_mm": 0.002422599790943673,
+        "bottom_z_error_mm": 0.001919577558877,
+        "hole_matches": [
+          {
+            "reference_index": 0,
+            "predicted_index": 1,
+            "center_error_mm": 0.00808659255180721,
+            "diameter_error_mm": 0.006125054885999681
+          },
+          {
+            "reference_index": 1,
+            "predicted_index": 0,
+            "center_error_mm": 0.006281458246688315,
+            "diameter_error_mm": 0.0006281351739998442
+          },
+          {
+            "reference_index": 2,
+            "predicted_index": 3,
+            "center_error_mm": 0.005694048717968283,
+            "diameter_error_mm": 0.0023615930499998328
+          },
+          {
+            "reference_index": 3,
+            "predicted_index": 2,
+            "center_error_mm": 0.006695524968702805,
+            "diameter_error_mm": 0.000155197894000203
+          }
+        ],
+        "hole_precision": 1.0,
+        "hole_recall": 1.0,
+        "hole_f1": 1.0,
+        "missing_holes": 0,
+        "extra_holes": 0,
+        "missing_volume_mm3": 8.28577588990973,
+        "excess_volume_mm3": 1.5841974257791627,
+        "symmetric_volume_difference_fraction": 0.0007193115728847605,
+        "solid_iou": 0.9992807714651921,
+        "thresholds": {
+          "dimension_tolerance_mm": 0.1,
+          "max_volume_difference_fraction": 0.01,
+          "hole_match_distance_mm": 1.0
+        },
+        "passed": true
+      }
+    },
+    {
+      "part": "two_hole_plate",
+      "seed": 42,
+      "noise_sigma_mm": 0.05,
+      "point_count": 12000,
+      "verification": {
+        "reference": {
+          "extents_mm": [
+            55.0,
+            30.0,
+            5.0
+          ],
+          "center_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "bottom_z_mm": 0.0,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -17.0,
+                0.0
+              ],
+              "diameter_mm": 8.0
+            },
+            {
+              "center_xy_mm": [
+                17.0,
+                0.0
+              ],
+              "diameter_mm": 8.0
+            }
+          ],
+          "volume_mm3": 7747.3451754256175
+        },
+        "reconstructed": {
+          "extents_mm": [
+            54.996574340136,
+            29.992862978887,
+            4.999044695062656
+          ],
+          "center_xy_mm": [
+            -0.00135190709200117,
+            0.0017700328734999715
+          ],
+          "bottom_z_mm": 0.0003868455733441,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -17.00458088595,
+                -0.006563626004258
+              ],
+              "diameter_mm": 7.99661332009
+            },
+            {
+              "center_xy_mm": [
+                17.008592728876,
+                -0.005708660141826
+              ],
+              "diameter_mm": 8.008247888174
+            }
+          ],
+          "volume_mm3": 7743.083333119033
+        },
+        "extent_absolute_errors_mm": [
+          0.003425659863999897,
+          0.00713702111299952,
+          0.0009553049373440814
+        ],
+        "plate_center_error_mm": 0.0022272559706225117,
+        "bottom_z_error_mm": 0.0003868455733441,
+        "hole_matches": [
+          {
+            "reference_index": 0,
+            "predicted_index": 0,
+            "center_error_mm": 0.008004105347299317,
+            "diameter_error_mm": 0.00338667991000019
+          },
+          {
+            "reference_index": 1,
+            "predicted_index": 1,
+            "center_error_mm": 0.010316190680251703,
+            "diameter_error_mm": 0.00824788817399913
+          }
+        ],
+        "hole_precision": 1.0,
+        "hole_recall": 1.0,
+        "hole_f1": 1.0,
+        "missing_holes": 0,
+        "extra_holes": 0,
+        "missing_volume_mm3": 4.882445616002542,
+        "excess_volume_mm3": 0.6206033094228118,
+        "symmetric_volume_difference_fraction": 0.0007103141528895454,
+        "solid_iou": 0.9992897427424707,
+        "thresholds": {
+          "dimension_tolerance_mm": 0.1,
+          "max_volume_difference_fraction": 0.01,
+          "hole_match_distance_mm": 1.0
+        },
+        "passed": true
+      }
+    },
+    {
+      "part": "two_hole_plate",
+      "seed": 43,
+      "noise_sigma_mm": 0.05,
+      "point_count": 12000,
+      "verification": {
+        "reference": {
+          "extents_mm": [
+            55.0,
+            30.0,
+            5.0
+          ],
+          "center_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "bottom_z_mm": 0.0,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -17.0,
+                0.0
+              ],
+              "diameter_mm": 8.0
+            },
+            {
+              "center_xy_mm": [
+                17.0,
+                0.0
+              ],
+              "diameter_mm": 8.0
+            }
+          ],
+          "volume_mm3": 7747.3451754256175
+        },
+        "reconstructed": {
+          "extents_mm": [
+            54.992697942208,
+            29.987355326695003,
+            4.996771388478066
+          ],
+          "center_xy_mm": [
+            -0.0011349580359993894,
+            0.001878141777501341
+          ],
+          "bottom_z_mm": 0.001529997390935,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -16.99765384902,
+                -9.04346712673e-05
+              ],
+              "diameter_mm": 8.009767455834
+            },
+            {
+              "center_xy_mm": [
+                17.000631713398,
+                -0.009188819932196
+              ],
+              "diameter_mm": 8.00107327566
+            }
+          ],
+          "volume_mm3": 7737.092279661542
+        },
+        "extent_absolute_errors_mm": [
+          0.007302057792003325,
+          0.012644673304997411,
+          0.0032286115219344325
+        ],
+        "plate_center_error_mm": 0.00219443529863049,
+        "bottom_z_error_mm": 0.001529997390935,
+        "hole_matches": [
+          {
+            "reference_index": 0,
+            "predicted_index": 0,
+            "center_error_mm": 0.002347893279243999,
+            "diameter_error_mm": 0.00976745583399996
+          },
+          {
+            "reference_index": 1,
+            "predicted_index": 1,
+            "center_error_mm": 0.00921050886561301,
+            "diameter_error_mm": 0.0010732756599995952
+          }
+        ],
+        "hole_precision": 1.0,
+        "hole_recall": 1.0,
+        "hole_f1": 1.0,
+        "missing_holes": 0,
+        "extra_holes": 0,
+        "missing_volume_mm3": 10.588029545513393,
+        "excess_volume_mm3": 0.33513378150530215,
+        "symmetric_volume_difference_fraction": 0.0014099234098496982,
+        "solid_iou": 0.9985901375778254,
+        "thresholds": {
+          "dimension_tolerance_mm": 0.1,
+          "max_volume_difference_fraction": 0.01,
+          "hole_match_distance_mm": 1.0
+        },
+        "passed": true
+      }
+    },
+    {
+      "part": "two_hole_plate",
+      "seed": 44,
+      "noise_sigma_mm": 0.05,
+      "point_count": 12000,
+      "verification": {
+        "reference": {
+          "extents_mm": [
+            55.0,
+            30.0,
+            5.0
+          ],
+          "center_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "bottom_z_mm": 0.0,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -17.0,
+                0.0
+              ],
+              "diameter_mm": 8.0
+            },
+            {
+              "center_xy_mm": [
+                17.0,
+                0.0
+              ],
+              "diameter_mm": 8.0
+            }
+          ],
+          "volume_mm3": 7747.3451754256175
+        },
+        "reconstructed": {
+          "extents_mm": [
+            55.001363684885,
+            29.994952692731,
+            4.996628340725929
+          ],
+          "center_xy_mm": [
+            -0.0011330471974986267,
+            -0.0017380305644998373
+          ],
+          "bottom_z_mm": 0.002505260396071,
+          "holes": [
+            {
+              "center_xy_mm": [
+                -16.99804199239,
+                -0.002848907306254
+              ],
+              "diameter_mm": 7.99798381113
+            },
+            {
+              "center_xy_mm": [
+                17.000171740508,
+                -0.002032993706249
+              ],
+              "diameter_mm": 8.009513174994
+            }
+          ],
+          "volume_mm3": 7740.467097674067
+        },
+        "extent_absolute_errors_mm": [
+          0.0013636848849998273,
+          0.005047307268998935,
+          0.003371659274071348
+        ],
+        "plate_center_error_mm": 0.0020747400306773654,
+        "bottom_z_error_mm": 0.002505260396071,
+        "hole_matches": [
+          {
+            "reference_index": 0,
+            "predicted_index": 0,
+            "center_error_mm": 0.003456886842296811,
+            "diameter_error_mm": 0.00201618886999988
+          },
+          {
+            "reference_index": 1,
+            "predicted_index": 1,
+            "center_error_mm": 0.00204023484230043,
+            "diameter_error_mm": 0.00951317499399984
+          }
+        ],
+        "hole_precision": 1.0,
+        "hole_recall": 1.0,
+        "hole_f1": 1.0,
+        "missing_holes": 0,
+        "extra_holes": 0,
+        "missing_volume_mm3": 7.357454044322452,
+        "excess_volume_mm3": 0.47937629267885384,
+        "symmetric_volume_difference_fraction": 0.0010115504291533998,
+        "solid_iou": 0.9989885121578611,
+        "thresholds": {
+          "dimension_tolerance_mm": 0.1,
+          "max_volume_difference_fraction": 0.01,
+          "hole_match_distance_mm": 1.0
+        },
+        "passed": true
+      }
+    }
+  ],
+  "ai_model": "qwen/qwen3-vl-8b-instruct",
+  "ai_total_cost_usd": 0.00181554,
+  "ai_cases": [
+    {
+      "case": "ai_four_hole_live",
+      "model_response_received": true,
+      "gate": "accepted",
+      "latency_seconds": 3.5268101670008036,
+      "cost_usd": 0.000527,
+      "step_verification_passed": true,
+      "solid_iou": 0.9994644360845132,
+      "reference_supported_symmetry_axes": [
+        "x_midplane",
+        "y_midplane"
+      ],
+      "omitted_symmetry_axes": [],
+      "proposal": {
+        "part_family": "rectangular_plate_with_round_holes",
+        "visible_hole_count": 4,
+        "hole_shape": "circular",
+        "symmetry_axes": [
+          "x_midplane",
+          "y_midplane"
+        ]
+      }
+    },
+    {
+      "case": "ai_two_hole_live",
+      "model_response_received": true,
+      "gate": "accepted",
+      "latency_seconds": 3.8195597080011794,
+      "cost_usd": 0.000563,
+      "step_verification_passed": true,
+      "solid_iou": 0.9985901375778254,
+      "reference_supported_symmetry_axes": [
+        "x_midplane",
+        "y_midplane"
+      ],
+      "omitted_symmetry_axes": [
+        "y_midplane"
+      ],
+      "proposal": {
+        "part_family": "rectangular_plate_with_round_holes",
+        "visible_hole_count": 2,
+        "hole_shape": "circular",
+        "symmetry_axes": [
+          "x_midplane"
+        ]
+      }
+    },
+    {
+      "case": "ai_slot_live",
+      "model_response_received": true,
+      "gate": "geometry_rejected",
+      "latency_seconds": 7.5603513749993,
+      "cost_usd": 0.00072554,
+      "proposal": {
+        "part_family": "rectangular_plate_with_round_holes",
+        "visible_hole_count": 1,
+        "hole_shape": "circular",
+        "symmetry_axes": [
+          "x_midplane"
+        ]
+      }
+    }
+  ]
+}

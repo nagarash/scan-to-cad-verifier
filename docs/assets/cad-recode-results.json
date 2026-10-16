@@ -1,0 +1,1018 @@
+{
+  "backend": "CAD-Recode v1.5",
+  "mode": "local_model",
+  "scan_sha256": "d25ed04df76bf7521f3bb0e74fdf7da669ffcbf2b8f2df25c7b7b391942ba76d",
+  "transform": {
+    "center_mm": [
+      -0.0006171132287704495,
+      -0.0009755180241768358,
+      241.29968411516958
+    ],
+    "scale_mm": 279.41265923802433,
+    "model_output_coordinate_scale": 100,
+    "input_count": 600000,
+    "model_point_count": 256,
+    "candidate_point_count": 8192,
+    "seed": 42,
+    "normalization": "bbox center, longest extent maps to [-1,1]"
+  },
+  "reference_used_for_generation": false,
+  "accepted": false,
+  "inference": {
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "latency_seconds": 113.50490858400008,
+    "generated_tokens": 380,
+    "max_new_tokens": 768,
+    "raw_generation": "import cadquery as cq\nw0=cq.Workplane('XY',origin=(0,0,-77))\nw1=cq.Workplane('XY',origin=(0,0,-50))\nr=w0.sketch().segment((-95,-34),(-90,-34)).arc((0,-100),(90,-34)).segment((95,-34)).segment((95,34)).segment((90,34)).arc((0,100),(-90,34)).segment((-95,34)).close().assemble().reset().face(w0.sketch().segment((-72,-1),(-66,-1)).arc((0,-77),(66,-1)).segment((72,-1)).segment((72,1)).segment((66,1)).arc((0,77),(-66,1)).segment((-72,1)).close().assemble(),mode='s').finalize().extrude(-9).union(w0.workplane(offset=91/2).moveTo(0,0).cylinder(91,22)).union(w0.workplane(offset=164/2).cylinder(164,11)).union(w1.sketch().segment((-31,-27),(-23,-27)).segment((-23,-10)).segment((-21,-10)).segment((-21,-19)).segment((32,-19)).segment((32,-5)).segment((23,-5)).segment((23,27)).segment((-23,27)).segment((-23,10)).segment((-31,10)).close().assemble().finalize().extrude(33))<|endoftext|>",
+    "finished_with_eos": true,
+    "torch_version": "2.5.1"
+  },
+  "outcome": "candidate_rejected",
+  "integration_note": "Initial validator lacked CadQuery Sketch.face/reset; added these supported methods, replayed unchanged generation without another model call.",
+  "model_provenance": {
+    "cad-recode-v1.5-revision": {
+      "repo": "filapro/cad-recode-v1.5",
+      "revision": "765e8cc315a1a77bd8c69ccd0b403bad20ce35e8"
+    },
+    "qwen2-tokenizer-revision": {
+      "repo": "Qwen/Qwen2-1.5B",
+      "revision": "8a16abf2848eda07cc5253dec660bf1ce007ad7a"
+    }
+  },
+  "execution": {
+    "candidate_step": "/Users/sharathnagaraja/Desktop/cad-verifier/outputs/reverse_engineering/ctc05/cad_recode/candidate.step",
+    "solid_count": 2,
+    "valid": true,
+    "volume_mm3": 7049995.193000821
+  },
+  "evaluation": {
+    "candidate": {
+      "valid": true,
+      "solid_count": 2,
+      "face_count": 38,
+      "surface_counts": {
+        "CYLINDER": 6,
+        "PLANE": 32
+      },
+      "extent_mm": [
+        530.88405255219,
+        558.825318476034,
+        483.38390048178104
+      ],
+      "volume_mm3": 7049995.1930013755,
+      "cylinders": [
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -0.0006171132287704,
+            -0.0009755180241768,
+            0.0
+          ],
+          "radius_mm": 61.470785032365
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -0.0006171132287704,
+            -0.0009755180241768,
+            0.0
+          ],
+          "radius_mm": 30.735392516183
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -0.0006171132287704,
+            -15.74968903871,
+            0.0
+          ],
+          "radius_mm": 263.66394571733
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -0.0006171132287704,
+            15.747738002664,
+            0.0
+          ],
+          "radius_mm": 263.66394571733
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -0.0006171132287562,
+            -28.898126855,
+            0.0
+          ],
+          "radius_mm": 186.25059627629
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -0.0006171132287847,
+            28.896175818961,
+            0.0
+          ],
+          "radius_mm": 186.25059627629
+        }
+      ]
+    },
+    "reference": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 209,
+      "surface_counts": {
+        "PLANE": 63,
+        "CYLINDER": 100,
+        "TORUS": 7,
+        "BSPLINE": 9,
+        "SPHERE": 4,
+        "CONE": 26
+      },
+      "extent_mm": [
+        527.0500002,
+        558.8,
+        482.60000000004186
+      ],
+      "volume_mm3": 12828990.962436875,
+      "cylinders": [
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 279.4
+        },
+        {
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 152.39999999999998
+        },
+        {
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -139.266372466571,
+            76.19999999999999,
+            0.0
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            -146.04999999999998
+          ],
+          "radius_mm": 203.2
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            222.25,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            222.25,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.1127812025174,
+            192.4812,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.1127812025174,
+            192.4812,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.4741459910956,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.4741459910956,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.1127812025174,
+            192.4812,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.1127812025174,
+            192.4812,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.4741459910956,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.4741459910956,
+            111.125,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -222.25,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -222.25,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.1127812025174,
+            -192.4812,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            111.1127812025174,
+            -192.4812,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.4741459910956,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            192.4741459910956,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.1127812025174,
+            -192.4812,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -111.1127812025174,
+            -192.4812,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.4741459910956,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -192.4741459910956,
+            -111.125,
+            0.0
+          ],
+          "radius_mm": 9.524999999999999
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            76.19999999999999,
+            31.75
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            139.266372466571,
+            76.19999999999999,
+            0.0
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            -69.85,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -50.8,
+            0.0
+          ],
+          "radius_mm": 127.0
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -24.636664649142638,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            -0.0,
+            1.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            69.85,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            95.25,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -89.6784138081172,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            -0.0,
+            1.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            -95.25,
+            0.0,
+            133.35
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -33.2256003963168,
+            241.29999999999998
+          ],
+          "radius_mm": 5.35813
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -40.9682864891204,
+            206.375
+          ],
+          "radius_mm": 5.35813
+        },
+        {
+          "axis": [
+            1.0,
+            -0.0,
+            -0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -48.710972581924,
+            171.45
+          ],
+          "radius_mm": 5.35813
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 31.75
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            35.2671418721538,
+            250.4472222919552
+          ],
+          "radius_mm": 3.51714187216396
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            42.993484624111,
+            263.057636519184
+          ],
+          "radius_mm": 0.539871038100062
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            43.912091654330396,
+            263.439023239264
+          ],
+          "radius_mm": 3.2609767607994997
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            35.3071658891592,
+            250.4755335331736
+          ],
+          "radius_mm": 0.41464187216392395
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            35.94573769438539,
+            240.7231638056432
+          ],
+          "radius_mm": 4.19573769438286
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            35.94573769438539,
+            240.6940758001668
+          ],
+          "radius_mm": 1.0925608279034378
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            36.25828680129,
+            226.1628142824076
+          ],
+          "radius_mm": 1.41661834504314
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            42.2032770327234,
+            235.43586950321458
+          ],
+          "radius_mm": 4.546722967287719
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            42.183306214371996,
+            235.14943820224042
+          ],
+          "radius_mm": 1.410378021808038
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            36.2614640962816,
+            226.24110276715618
+          ],
+          "radius_mm": 4.56830860757838
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -139.266372466571,
+            -76.19999999999999,
+            0.0
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            139.266372466571,
+            -76.19999999999999,
+            0.0
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            -76.19999999999999,
+            31.75
+          ],
+          "radius_mm": 6.35
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 19.049999999999997
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            -234.95,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            203.2,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            234.95,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 3.96875
+        },
+        {
+          "axis": [
+            -0.0,
+            -0.0,
+            1.0
+          ],
+          "axis_origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "radius_mm": 127.0
+        }
+      ]
+    },
+    "cylinder_comparison": {
+      "matches": [],
+      "missing_reference_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "extra_candidate_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "association": "one-to-one held-out CAD association; no independent semantic feature naming"
+    },
+    "drawing_checks": [
+      {
+        "feature": "rear_bore_diameter",
+        "nominal": 10.0,
+        "tolerance_plus_minus": 0.001,
+        "nominal_mm": 254.0,
+        "tolerance_mm": 0.0254,
+        "measured_mm": null,
+        "passed": false,
+        "association": "held-out CAD-assisted"
+      }
+    ],
+    "accepted": false,
+    "rejection_reasons": [
+      "Candidate must be one valid closed solid",
+      "Reference cylindrical features are missing",
+      "Candidate has unmatched cylindrical features",
+      "Selected drawing size check failed or feature missing",
+      "Sampled bidirectional surface distances exceed geometry thresholds",
+      "Overall extents differ by more than 0.1 mm",
+      "Relative solid-volume error exceeds 0.1%"
+    ],
+    "surface_comparison": {
+      "samples_each_direction": 5000,
+      "tessellation_mm": 0.002,
+      "angular_tolerance_rad": 0.03,
+      "candidate_to_reference_p95_mm": 47.65902354787869,
+      "reference_to_candidate_p95_mm": 66.66719306168504,
+      "sampled_max_mm": 90.92848688250486,
+      "scope": "Sampled geometry evidence, not proof of complete GD&T conformance"
+    },
+    "relative_volume_error": 0.4504637805386508,
+    "acceptance_scope": "Selected sizes and sampled geometry; datum-based GD&T not evaluated",
+    "reference_used_only_by_evaluator": true,
+    "extent_error_mm": [
+      3.8340523521900423,
+      0.02531847603404458,
+      0.783900481739181
+    ]
+  }
+}

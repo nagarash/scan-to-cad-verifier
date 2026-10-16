@@ -1,0 +1,17 @@
+{
+  "id": "nist_ctc_05_asme1_rd",
+  "source_page": "https://www.nist.gov/ctl/smart-connected-systems-division/smart-connected-manufacturing-systems-group/mbe-pmi-0",
+  "archive_filename": "ctc_definitions.zip",
+  "archive_sha256": "79ebc74d99eb05c0d23de1c1d8730651fa2a24def56f647bac21dd439ec40690",
+  "files": {
+    "reference.step": {
+      "archive_member": "NIST_MBE_PMI_CTC_Definitions/nist_ctc_05_asme1_rd.stp",
+      "sha256": "edc5bb91c00a0fe6d1c76439130f6deabfef851e910538e8f23daf5dfe70f9e7"
+    },
+    "drawing.pdf": {
+      "archive_member": "NIST_MBE_PMI_CTC_Definitions/nist_ctc_05_asme1_rd.pdf",
+      "sha256": "1357a2aec060ab6ce963cc0ad974f0d693287bd2cb745ca409a6254604359313"
+    }
+  },
+  "acknowledgement": "Geometry and drawing supplied by NIST; no endorsement implied."
+}

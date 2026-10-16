@@ -1,0 +1,20 @@
+# Credentials and environment files (including example env files).
+.env
+.env.*
+*.env
+*.env.*
+config/settings.yaml
+
+# Local runtimes and caches.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Generated runs, downloaded model weights, and source archives.
+outputs/
+data/generated/
+data/nist/source/

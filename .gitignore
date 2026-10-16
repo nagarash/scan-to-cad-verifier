@@ -12,3 +12,7 @@ venv/
 # macOS / notebooks
 .DS_Store
 .ipynb_checkpoints/
+
+# Secrets and local config
+.env
+.env.*

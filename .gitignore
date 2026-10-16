@@ -1,20 +1,14 @@
-# Credentials and environment files (including example env files).
-.env
-.env.*
-*.env
-*.env.*
-config/settings.yaml
+# Generated data and experiment outputs (regenerable; see scripts/ and README)
+data/
+outputs/
 
-# Local runtimes and caches.
-.venv/
-venv/
-env/
+# Python
 __pycache__/
 *.py[cod]
-.pytest_cache/
-.DS_Store
+.venv/
+venv/
+*.egg-info/
 
-# Generated runs, downloaded model weights, and source archives.
-outputs/
-data/generated/
-data/nist/source/
+# macOS / notebooks
+.DS_Store
+.ipynb_checkpoints/

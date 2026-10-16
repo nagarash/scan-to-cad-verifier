@@ -1,0 +1,11 @@
+model:
+  provider: openrouter
+  base_url: https://openrouter.ai/api/v1
+  name: qwen/qwen3-vl-8b-instruct
+  api_key_env: OPENROUTER_API_KEY
+  temperature: 0
+  timeout_seconds: 90
+  max_output_tokens: 1200
+geometry:
+  sample_points: 10000
+  noise_sigma_mm: 0.0
